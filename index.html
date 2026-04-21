@@ -2,19 +2,28 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MAEVEN — Crafted for the woman who knows.</title>
-  <meta name="description" content="MAEVEN é uma marca de moda premium feminina. Peças com precisão artesanal e silhuetas modernas — entre o luxo europeu e o desejo contemporâneo." />
-  <meta name="keywords" content="moda premium feminina, roupas de luxo, fashion contemporâneo, MAEVEN" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <!-- ============== SEO PRINCIPAL ============== -->
+  <title>MAEVEN — Moda Premium Feminina | Peças de Luxo Acessível | Frete Grátis</title>
+  <meta name="description" content="MAEVEN: moda premium feminina com tecidos italianos, caimento impecável e design atemporal. Frete grátis acima de R$550. Parcele em 12x sem juros. Troca garantida em 30 dias." />
+  <meta name="keywords" content="moda premium feminina, roupas de luxo, vestidos sofisticados, blazer feminino premium, MAEVEN, fashion contemporâneo, roupas femininas online, alfaiataria feminina" />
+  <meta name="author" content="MAEVEN" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="canonical" href="https://maeven.com/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="MAEVEN — Crafted for the woman who knows." />
-  <meta property="og:description" content="Peças que definem quem você é antes de você falar." />
+  <meta property="og:site_name" content="MAEVEN" />
+  <meta property="og:title" content="MAEVEN — Moda Premium Feminina com Caimento Italiano" />
+  <meta property="og:description" content="Peças que definem quem você é antes de falar. Tecidos nobres, caimento perfeito, envio em 24h." />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
   <meta property="og:url" content="https://maeven.com/" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MAEVEN — Moda Premium Feminina" />
+  <meta name="twitter:description" content="Peças que marcam. Tecidos que duram." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,18 +41,42 @@
         "name": "MAEVEN",
         "url": "https://maeven.com",
         "logo": "https://maeven.com/logo.svg",
-        "sameAs": ["https://instagram.com/maevenofficial","https://pinterest.com/maeven"]
+        "description": "Marca de moda premium feminina com peças de tecido italiano e caimento impecável.",
+        "foundingDate": "2012",
+        "sameAs": ["https://instagram.com/maevenofficial","https://pinterest.com/maeven"],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Customer Service",
+          "email": "ola@maeven.com",
+          "telephone": "+55-11-94000-0000",
+          "availableLanguage": "Portuguese"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "2431",
+          "bestRating": "5"
+        }
       },
       {
         "@type": "WebSite",
         "@id": "https://maeven.com/#website",
         "url": "https://maeven.com",
         "name": "MAEVEN",
+        "inLanguage": "pt-BR",
         "potentialAction": {
           "@type": "SearchAction",
           "target": "https://maeven.com/busca?q={search_term_string}",
           "query-input": "required name=search_term_string"
         }
+      },
+      {
+        "@type": "Store",
+        "name": "MAEVEN",
+        "image": "https://maeven.com/og.jpg",
+        "priceRange": "R$ 320 - R$ 1.890",
+        "currenciesAccepted": "BRL",
+        "paymentAccepted": "Credit Card, Pix, Boleto"
       },
       {
         "@type": "FAQPage",
@@ -53,7 +86,7 @@
             "name": "Qual o prazo de entrega?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Entrega em 3 a 7 dias úteis para todo o Brasil. Capitais em até 3 dias."
+              "text": "Capitais: 2 a 4 dias úteis. Demais regiões: 5 a 8 dias. Enviamos via Sedex com rastreamento."
             }
           },
           {
@@ -61,7 +94,23 @@
             "name": "Como funciona a troca?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Trocas gratuitas em até 30 dias após o recebimento. Sem burocracia."
+              "text": "30 dias para trocar qualquer peça. Retirada gratuita em casa. Sem burocracia."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Os tecidos são importados?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Selecionamos tecidos em Portugal, Itália e Japão com critérios rigorosos de qualidade."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Posso parcelar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Em até 12x sem juros no cartão. Pix com 5% de desconto adicional."
             }
           }
         ]
@@ -2902,6 +2951,547 @@ input, textarea, select {
   color: var(--gold);
 }
 
+/* =============================================================
+   CONVERSION COMPONENTS v2
+   ============================================================= */
+
+/* Badge hot */
+.badge-hot { background: #a83232; color: var(--white); }
+
+/* Stock warning in card */
+.stock-warning {
+  position: absolute;
+  bottom: var(--sp-3);
+  left: var(--sp-3);
+  background: rgba(10,10,10,0.9);
+  color: var(--white);
+  font-size: 10px;
+  padding: 4px 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-left: 2px solid #c87934;
+  z-index: 2;
+}
+
+/* Installment text under price */
+.price-installment {
+  font-size: var(--text-xs);
+  color: var(--stone);
+  width: 100%;
+  margin-top: 2px;
+}
+
+/* Countdown announcement bar */
+.announcement-bar { min-height: 38px; }
+.announcement-bar strong { color: var(--gold); font-weight: 500; }
+.announcement-bar-countdown {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  background: rgba(255,255,255,0.08);
+  padding: 3px 10px;
+  border-radius: 2px;
+  margin: 0 var(--sp-2);
+}
+.countdown-digit {
+  font-weight: 500;
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+  min-width: 16px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Live viewing pulse dot */
+.live-viewing {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  background: rgba(168, 50, 50, 0.1);
+  color: #a83232;
+  padding: 4px 10px;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border-radius: 2px;
+  margin-bottom: var(--sp-4);
+}
+.live-viewing::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: #a83232;
+  border-radius: 50%;
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+/* PDP Social proof strip */
+.pdp-social-proof-strip {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-4);
+  background: var(--cream);
+  border-left: 2px solid var(--gold);
+  margin-bottom: var(--sp-5);
+}
+.pdp-social-proof-line {
+  font-size: var(--text-xs);
+  color: var(--charcoal);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+.pdp-social-proof-line::before {
+  content: '✓';
+  color: #2e7d4f;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* PDP Guarantee box */
+.pdp-guarantee {
+  padding: var(--sp-4);
+  background: var(--cream);
+  border: 1px solid var(--mist);
+  margin: var(--sp-5) 0;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+.pdp-guarantee-icon {
+  width: 44px; height: 44px;
+  border: 1.5px solid var(--gold);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.pdp-guarantee-icon svg { width: 20px; height: 20px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+.pdp-guarantee-title {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--noir);
+  margin-bottom: 2px;
+}
+.pdp-guarantee-text {
+  font-size: 11px;
+  color: var(--stone);
+  line-height: 1.5;
+}
+
+/* PDP Pix discount line */
+.pdp-pix-discount {
+  font-size: var(--text-xs);
+  color: #2e7d4f;
+  font-weight: 500;
+  margin-bottom: var(--sp-5);
+}
+
+/* PDP Reviews section */
+.pdp-reviews {
+  grid-column: span 2;
+  padding: var(--sp-8);
+  border-top: 1px solid var(--mist);
+  background: var(--ivory);
+}
+.pdp-reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--sp-6);
+  flex-wrap: wrap;
+  gap: var(--sp-4);
+}
+.pdp-reviews-title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 400;
+}
+.pdp-reviews-summary {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+.pdp-reviews-summary strong {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 400;
+}
+.pdp-reviews-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-4);
+}
+.pdp-review {
+  padding: var(--sp-5);
+  background: var(--white);
+  border: 1px solid var(--mist);
+}
+.pdp-review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--sp-3);
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+.pdp-review-name {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--noir);
+}
+.pdp-review-verified {
+  font-size: 10px;
+  color: #2e7d4f;
+  letter-spacing: 0.05em;
+  margin-left: var(--sp-2);
+}
+.pdp-review-date {
+  font-size: 11px;
+  color: var(--silver);
+}
+.pdp-review-stars { display: flex; gap: 2px; margin-bottom: var(--sp-2); }
+.pdp-review-stars svg { width: 12px; height: 12px; fill: var(--gold); }
+.pdp-review-text {
+  font-size: var(--text-sm);
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+.pdp-review-meta {
+  font-size: 11px;
+  color: var(--stone);
+  margin-top: var(--sp-3);
+  padding-top: var(--sp-2);
+  border-top: 1px solid var(--mist);
+}
+
+/* PDP Stock urgency */
+.pdp-stock-urgency {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--text-xs);
+  color: var(--charcoal);
+  margin-bottom: var(--sp-5);
+  padding: var(--sp-3);
+  background: rgba(200, 121, 52, 0.08);
+  border-left: 2px solid #c87934;
+}
+.pdp-stock-urgency strong { color: #c87934; }
+
+/* Shipping progress bar */
+.shipping-progress {
+  padding: var(--sp-4) var(--sp-6);
+  background: var(--cream);
+  border-bottom: 1px solid var(--mist);
+  flex-shrink: 0;
+}
+.shipping-progress-text {
+  font-size: var(--text-xs);
+  color: var(--charcoal);
+  margin-bottom: var(--sp-2);
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+.shipping-progress-text strong { color: #2e7d4f; }
+.shipping-progress-bar {
+  height: 4px;
+  background: var(--mist);
+  overflow: hidden;
+  border-radius: 2px;
+}
+.shipping-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), #2e7d4f);
+  transition: width var(--duration-slow) var(--ease-out);
+  width: 0%;
+}
+
+/* Bundle section */
+.bundle-section {
+  padding: var(--sp-20) 0;
+  background: var(--noir);
+  color: var(--ivory);
+  position: relative;
+  overflow: hidden;
+}
+.bundle-section::before {
+  content: '+'; position: absolute;
+  font-family: var(--font-display);
+  font-size: 50vw; font-weight: 300;
+  color: rgba(201,169,110,0.04);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; line-height: 1;
+}
+.bundle-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-16);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.bundle-header .section-label { color: var(--gold); margin-bottom: var(--sp-4); display: block; }
+.bundle-header .section-title {
+  color: var(--white);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: var(--sp-6);
+}
+.bundle-header em { font-style: italic; color: var(--gold-light); }
+.bundle-header p {
+  color: rgba(255,255,255,0.65);
+  font-size: var(--text-md);
+  line-height: 1.8;
+  margin-bottom: var(--sp-6);
+}
+.bundle-savings {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-3);
+  background: rgba(201,169,110,0.1);
+  border: 1px solid rgba(201,169,110,0.3);
+  padding: var(--sp-3) var(--sp-5);
+  margin-bottom: var(--sp-6);
+  color: var(--gold-light);
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.bundle-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+.bundle-item {
+  display: grid;
+  grid-template-columns: auto 70px 1fr auto;
+  gap: var(--sp-4);
+  align-items: center;
+  padding: var(--sp-4);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: border-color var(--duration-fast);
+}
+.bundle-item:hover { border-color: var(--gold); }
+.bundle-check {
+  width: 22px; height: 22px;
+  border: 1px solid var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: all var(--duration-fast);
+}
+.bundle-check.checked { background: var(--gold); }
+.bundle-check.checked::after {
+  content: '✓'; color: var(--noir); font-weight: 700; font-size: 13px; line-height: 1;
+}
+.bundle-item img {
+  width: 70px; height: 90px;
+  object-fit: cover;
+  background: var(--cream);
+}
+.bundle-item-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin-bottom: 2px;
+  color: var(--ivory);
+}
+.bundle-item-sub { font-size: 11px; color: rgba(255,255,255,0.5); }
+.bundle-item-price {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--gold-light);
+  text-align: right;
+}
+.bundle-total {
+  margin-top: var(--sp-6);
+  padding-top: var(--sp-6);
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.bundle-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.6);
+  margin-bottom: var(--sp-2);
+}
+.bundle-total-row.grand {
+  font-size: var(--text-xl);
+  color: var(--white);
+  font-weight: 500;
+  margin-top: var(--sp-3);
+  padding-top: var(--sp-3);
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.bundle-total-row.grand span:last-child {
+  color: var(--gold);
+  font-family: var(--font-display);
+}
+.bundle-savings-tag { color: var(--gold); font-weight: 500; }
+
+/* Sticky Mobile ATC */
+.sticky-atc {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: var(--white);
+  border-top: 1px solid var(--mist);
+  padding: var(--sp-3) var(--sp-4);
+  z-index: 85;
+  display: none;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+  transform: translateY(100%);
+  transition: transform var(--duration) var(--ease);
+}
+.sticky-atc.visible { transform: translateY(0); }
+.sticky-atc-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  max-width: 500px;
+  margin: 0 auto;
+}
+.sticky-atc-info { flex: 1; min-width: 0; }
+.sticky-atc-name {
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  font-weight: 400;
+  color: var(--noir);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sticky-atc-price { font-size: var(--text-xs); color: var(--stone); }
+.sticky-atc .btn {
+  flex-shrink: 0;
+  padding: 12px 20px;
+  font-size: 11px;
+  min-height: 44px;
+}
+
+/* Hero social proof */
+.hero-social-proof {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  margin-top: var(--sp-12);
+  padding-top: var(--sp-8);
+  border-top: 1px solid rgba(255,255,255,0.12);
+  max-width: 520px;
+  opacity: 0;
+  animation: fadeUp 1s var(--ease-out) 1.1s forwards;
+}
+.hero-avatars { display: flex; flex-shrink: 0; }
+.hero-avatars img {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--noir);
+  margin-left: -10px;
+  object-fit: cover;
+}
+.hero-avatars img:first-child { margin-left: 0; }
+.hero-social-text {
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.05em;
+}
+.hero-social-text strong { color: var(--white); font-weight: 500; }
+.hero-social-stars {
+  display: inline-flex; gap: 1px; vertical-align: middle;
+  margin-right: var(--sp-2);
+}
+.hero-social-stars svg { width: 12px; height: 12px; fill: var(--gold); }
+
+/* Trust bar (homepage) */
+.trust-bar-home {
+  padding: var(--sp-10) 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--mist);
+}
+.trust-bar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-8);
+}
+.trust-bar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-4);
+}
+.trust-bar-icon {
+  width: 44px; height: 44px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.trust-bar-icon svg { width: 20px; height: 20px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+.trust-bar-title {
+  font-size: var(--text-sm); font-weight: 500;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--noir); margin-bottom: var(--sp-1);
+}
+.trust-bar-desc { font-size: var(--text-xs); color: var(--stone); line-height: 1.6; }
+
+/* Testimonials upgrade */
+.testimonial-verified {
+  position: absolute;
+  top: var(--sp-4); right: var(--sp-4);
+  font-size: 9px;
+  color: #2e7d4f;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.testimonial-verified::before { content: '✓'; font-weight: 700; }
+.testimonial-stars {
+  display: flex; gap: 2px;
+  margin-bottom: var(--sp-4);
+}
+.testimonial-stars svg { width: 14px; height: 14px; fill: var(--gold); }
+.testimonial-title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--noir);
+  margin-bottom: var(--sp-3);
+}
+
+/* Newsletter gift tag */
+.newsletter-gift {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--noir);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  margin-bottom: var(--sp-6);
+  border-radius: 2px;
+}
+
+/* Responsive for new components */
+@media (max-width: 900px) {
+  .trust-bar-grid { grid-template-columns: repeat(2, 1fr); }
+  .bundle-inner { grid-template-columns: 1fr; }
+  .pdp-reviews-list { grid-template-columns: 1fr; }
+  .sticky-atc { display: block; }
+  body.pdp-open .sticky-atc { display: none; }
+  /* Mobile: always visible actions on product card */
+  .product-card-wishlist { opacity: 1; transform: scale(1); }
+}
+@media (max-width: 600px) {
+  .trust-bar-grid { grid-template-columns: 1fr; gap: var(--sp-5); }
+  .hero-social-proof { flex-wrap: wrap; gap: var(--sp-3); }
+  .announcement-bar { font-size: 10px; gap: var(--sp-2); flex-wrap: wrap; padding: var(--sp-2); }
+}
+
 /* ============================================================
    ANIMATIONS
    ============================================================ */
@@ -2987,10 +3577,16 @@ input, textarea, select {
 <body>
 
 <!-- ======================================================
-     ANNOUNCEMENT BAR
+     ANNOUNCEMENT BAR com countdown real
      ====================================================== -->
 <div class="announcement-bar" role="banner">
-  Frete grátis para compras acima de <span>R$ 550</span> &nbsp;·&nbsp; Troca gratuita em até 30 dias &nbsp;·&nbsp; Pagamento em até 12x sem juros
+  <span><strong>LIQUIDAÇÃO RELÂMPAGO</strong> · Até 30% OFF · Termina em</span>
+  <span class="announcement-bar-countdown">
+    <span class="countdown-digit" id="cd-h">12</span>h
+    <span class="countdown-digit" id="cd-m">00</span>m
+    <span class="countdown-digit" id="cd-s">00</span>s
+  </span>
+  <span>· <strong>Frete grátis</strong> acima de R$ 550</span>
 </div>
 
 <!-- ======================================================
@@ -3033,7 +3629,7 @@ input, textarea, select {
       <!-- Cart -->
       <button class="header-action-btn" aria-label="Carrinho" onclick="toggleCart()">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-        <span class="cart-badge" id="cart-badge" aria-live="polite">2</span>
+        <span class="cart-badge" id="cart-badge" aria-live="polite">0</span>
       </button>
 
       <!-- Mobile menu -->
@@ -3075,97 +3671,71 @@ input, textarea, select {
 </div>
 
 <!-- ======================================================
-     CART DRAWER
+     CART DRAWER v2 — dynamic + localStorage
      ====================================================== -->
 <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
-<aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Carrinho de compras">
+<aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Carrinho">
   <div class="cart-header">
     <div>
-      <h2>Carrinho</h2>
-      <div class="cart-count-label">2 itens selecionados</div>
+      <h2>Seu Carrinho</h2>
+      <div class="cart-count-label" id="cart-count-label">Vazio</div>
     </div>
-    <button class="cart-close" onclick="toggleCart()" aria-label="Fechar carrinho">
+    <button class="cart-close" onclick="toggleCart()" aria-label="Fechar">
       <svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
     </button>
   </div>
 
-  <div class="cart-items">
-    <!-- Item 1 -->
-    <div class="cart-item">
-      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=160&q=80" alt="Vestido Ébène" class="cart-item-img" loading="lazy" width="80" height="100" />
-      <div>
-        <div class="cart-item-name">Vestido Ébène</div>
-        <div class="cart-item-variant">Noir · P</div>
-        <div class="cart-item-qty">
-          <button class="qty-btn" onclick="updateQty(this,-1)" aria-label="Diminuir quantidade">−</button>
-          <span class="qty-value">1</span>
-          <button class="qty-btn" onclick="updateQty(this,1)" aria-label="Aumentar quantidade">+</button>
-        </div>
-      </div>
-      <div>
-        <div class="cart-item-price">R$ 890</div>
-        <span class="cart-item-remove" onclick="removeItem(this)" role="button" tabindex="0">Remover</span>
-      </div>
+  <!-- Shipping Progress -->
+  <div class="shipping-progress">
+    <div class="shipping-progress-text" id="shipping-progress-text">
+      Adicione <strong>R$ 550</strong> para ganhar frete grátis
     </div>
-
-    <!-- Item 2 -->
-    <div class="cart-item">
-      <img src="https://images.unsplash.com/photo-1554412933-514a83d2f3c8?w=160&q=80" alt="Blazer Lumière" class="cart-item-img" loading="lazy" width="80" height="100" />
-      <div>
-        <div class="cart-item-name">Blazer Lumière</div>
-        <div class="cart-item-variant">Ivoire · M</div>
-        <div class="cart-item-qty">
-          <button class="qty-btn" onclick="updateQty(this,-1)" aria-label="Diminuir quantidade">−</button>
-          <span class="qty-value">1</span>
-          <button class="qty-btn" onclick="updateQty(this,1)" aria-label="Aumentar quantidade">+</button>
-        </div>
-      </div>
-      <div>
-        <div class="cart-item-price">R$ 1.190</div>
-        <span class="cart-item-remove" onclick="removeItem(this)" role="button" tabindex="0">Remover</span>
-      </div>
+    <div class="shipping-progress-bar">
+      <div class="shipping-progress-fill" id="shipping-progress-fill"></div>
     </div>
   </div>
 
-  <!-- Upsell -->
-  <div class="cart-upsell">
-    <div class="cart-upsell-label">Você também vai amar</div>
-    <div class="cart-upsell-item">
-      <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=120&q=80" alt="Cinto Ardoise" class="cart-upsell-img" loading="lazy" width="52" height="68" />
-      <div class="cart-upsell-name">Cinto Ardoise</div>
-      <div class="cart-upsell-price">R$ 320</div>
-      <span class="cart-upsell-add" onclick="showToast('Cinto Ardoise adicionado ao carrinho!')">+ Adicionar</span>
-    </div>
+  <!-- Items (dynamic) -->
+  <div id="cart-items-container"></div>
+
+  <!-- Upsell (dynamic) -->
+  <div class="cart-upsell" id="cart-upsell" style="display:none;">
+    <div class="cart-upsell-label">Quem levou isso, também levou</div>
+    <div id="cart-upsell-items"></div>
   </div>
 
-  <!-- Footer -->
-  <div class="cart-footer">
-    <div class="cart-subtotal">
-      <span class="cart-subtotal-label">Subtotal</span>
-      <span class="cart-subtotal-value" id="cart-total">R$ 2.080</span>
+  <!-- Footer (dynamic) -->
+  <div class="cart-footer" id="cart-footer" style="display:none;">
+    <div class="cart-totals" style="display:flex;flex-direction:column;gap:var(--sp-2);margin-bottom:var(--sp-4);">
+      <div style="display:flex;justify-content:space-between;font-size:var(--text-xs);color:var(--stone);">
+        <span>Subtotal</span><span id="cart-subtotal">R$ 0</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:var(--text-xs);color:var(--stone);">
+        <span>Frete</span><span id="cart-shipping">—</span>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:var(--text-md);font-weight:500;color:var(--noir);padding-top:var(--sp-3);border-top:1px solid var(--mist);margin-top:var(--sp-1);">
+        <span>Total</span><span style="font-family:var(--font-display);font-size:1.3rem;" id="cart-total">R$ 0</span>
+      </div>
     </div>
-    <div class="cart-shipping-bar">
-      <strong>✓ Frete grátis</strong> — você já atingiu o valor mínimo!
-    </div>
-    <button class="btn btn-primary btn-lg cart-checkout-btn" onclick="showPage('checkout');toggleCart()">
-      Finalizar Compra
+    <button class="btn btn-primary btn-lg cart-checkout-btn" onclick="showPage('checkout');toggleCart();">
+      Finalizar Compra →
     </button>
     <button class="cart-continue" onclick="toggleCart()">Continuar comprando</button>
     <div class="cart-trust">
       <div class="cart-trust-item">
         <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        Compra segura
+        Compra 100% segura
       </div>
       <div class="cart-trust-item">
-        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        Troca grátis
+        <svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+        Troca grátis em 30 dias
       </div>
     </div>
   </div>
 </aside>
 
 <!-- ======================================================
-     QUICK VIEW / PDP MODAL
+     PDP MODAL v2 — conversion upgraded
      ====================================================== -->
 <div class="pdp-overlay" id="pdp-overlay" onclick="closePDP(event)">
   <div class="pdp-modal" role="dialog" aria-modal="true" aria-label="Detalhes do produto" id="pdp-modal">
@@ -3173,39 +3743,38 @@ input, textarea, select {
       <button class="pdp-close" onclick="closePDP()" aria-label="Fechar">
         <svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>
-      <img id="pdp-img" src="" alt="" loading="lazy" width="450" height="560" />
+      <img id="pdp-img" src="" alt="" loading="lazy" width="500" height="620" />
     </div>
     <div class="pdp-info">
+      <div class="live-viewing" id="pdp-live-viewing"></div>
       <div class="pdp-category" id="pdp-category"></div>
       <h2 class="pdp-title" id="pdp-title"></h2>
       <p class="pdp-sub" id="pdp-sub"></p>
+
+      <div class="pdp-rating-row">
+        <div class="stars" id="pdp-stars"></div>
+        <span style="font-size:var(--text-xs);color:var(--stone);" id="pdp-rating-num"></span>
+        <a class="pdp-reviews-link" id="pdp-reviews-link"></a>
+      </div>
+
       <div class="pdp-price-block">
         <span class="pdp-price" id="pdp-price"></span>
       </div>
       <div class="pdp-installments" id="pdp-installments"></div>
-      <div class="pdp-rating-row">
-        <div class="stars">
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24" class="empty"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <span style="font-size:var(--text-xs);color:var(--stone);">4.0</span>
-        <a class="pdp-reviews-link">84 avaliações</a>
-      </div>
+      <div class="pdp-pix-discount">✓ 5% OFF no Pix — <strong id="pdp-pix-price"></strong> à vista</div>
+
+      <!-- Social proof strip -->
+      <div class="pdp-social-proof-strip" id="pdp-social-proof-strip"></div>
 
       <!-- Cores -->
       <div class="pdp-colors-label">Cor</div>
-      <div class="pdp-colors">
-        <div class="pdp-color-swatch active" style="background:#1a1a1a;" title="Noir" onclick="selectSwatch(this)"></div>
-        <div class="pdp-color-swatch" style="background:#e8d5c9;" title="Blush" onclick="selectSwatch(this)"></div>
-        <div class="pdp-color-swatch" style="background:#f5f0e8;" title="Ivoire" onclick="selectSwatch(this)"></div>
-        <div class="pdp-color-swatch" style="background:#6b6b6b;" title="Gris" onclick="selectSwatch(this)"></div>
-      </div>
+      <div class="pdp-colors" id="pdp-colors"></div>
 
       <!-- Tamanhos -->
-      <div class="pdp-sizes-label">Tamanho</div>
+      <div class="pdp-sizes-label" style="display:flex;justify-content:space-between;align-items:center;">
+        <span>Tamanho</span>
+        <span style="font-size:11px;color:var(--gold);text-transform:none;letter-spacing:0.02em;font-weight:400;text-decoration:underline;cursor:pointer;" onclick="showToast('Guia de medidas em breve.')">Guia de medidas</span>
+      </div>
       <div class="pdp-sizes">
         <button class="pdp-size-btn unavailable" disabled>PP</button>
         <button class="pdp-size-btn" onclick="selectSize(this)">P</button>
@@ -3214,34 +3783,80 @@ input, textarea, select {
         <button class="pdp-size-btn" onclick="selectSize(this)">GG</button>
       </div>
 
-      <div class="pdp-stock">
-        <span class="stock-dot low"></span>
-        Apenas 4 unidades disponíveis
-      </div>
+      <!-- Estoque / urgência -->
+      <div class="pdp-stock-urgency" id="pdp-stock"></div>
 
-      <button class="btn btn-primary btn-lg pdp-add-btn" onclick="addToCart()">
-        Adicionar ao Carrinho
+      <!-- Main CTA -->
+      <button class="btn btn-primary btn-lg pdp-add-btn" onclick="addToCartFromPDP()">
+        Quero essa peça →
       </button>
       <button class="pdp-wishlist-btn" onclick="showToast('❤ Adicionado à lista de desejos.')">
         <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        Adicionar à lista de desejos
+        Salvar na lista de desejos
       </button>
+
+      <!-- GUARANTEE BOX -->
+      <div class="pdp-guarantee">
+        <div class="pdp-guarantee-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <div>
+          <div class="pdp-guarantee-title">Garantia MAEVEN de 30 dias</div>
+          <div class="pdp-guarantee-text">Não amou? Devolvemos 100% do valor. Sem perguntas, sem burocracia.</div>
+        </div>
+      </div>
 
       <div class="pdp-benefits">
         <div class="pdp-benefit-row">
           <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-          Frete grátis acima de R$550
+          <span><strong>Entrega em 2–4 dias úteis</strong> · Frete grátis acima de R$550</span>
         </div>
         <div class="pdp-benefit-row">
-          <svg viewBox="0 0 24 24"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-          Embalagem especial com lacre MAEVEN
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+          <span><strong>12x sem juros</strong> · Pix com 5% OFF · Boleto</span>
         </div>
         <div class="pdp-benefit-row">
-          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-          Troca e devolução em 30 dias
+          <svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          <span><strong>Troca grátis em 30 dias</strong> · Retirada em casa</span>
+        </div>
+        <div class="pdp-benefit-row">
+          <svg viewBox="0 0 24 24"><path d="M20 7 9 18l-5-5"/></svg>
+          <span><strong>Embalagem presente MAEVEN</strong> grátis em toda compra</span>
         </div>
       </div>
     </div>
+
+    <!-- Reviews Section dentro do PDP -->
+    <div class="pdp-reviews">
+      <div class="pdp-reviews-header">
+        <div>
+          <div class="pdp-reviews-title">O que as clientes dizem</div>
+          <div class="pdp-reviews-summary" style="margin-top:var(--sp-2);">
+            <div class="stars">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <strong id="pdp-reviews-avg">4.9</strong>
+            <span style="font-size:var(--text-xs);color:var(--stone);" id="pdp-reviews-count">(124 avaliações)</span>
+          </div>
+        </div>
+      </div>
+      <div class="pdp-reviews-list" id="pdp-reviews-list"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Sticky Mobile ATC -->
+<div class="sticky-atc" id="sticky-atc" aria-hidden="true">
+  <div class="sticky-atc-inner">
+    <div class="sticky-atc-info">
+      <div class="sticky-atc-name" id="sticky-atc-name"></div>
+      <div class="sticky-atc-price" id="sticky-atc-price"></div>
+    </div>
+    <button class="btn btn-primary" onclick="addToCartFromPDP()">Quero essa →</button>
   </div>
 </div>
 
@@ -3270,31 +3885,37 @@ input, textarea, select {
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content container">
-      <div class="hero-eyebrow">Coleção Outono 2025</div>
+      <div class="hero-eyebrow">Coleção Outono 2025 · Estreia agora</div>
       <h1 class="hero-headline">
         Peças que definem<br />
         <em>quem você é</em><br />
         antes de falar.
       </h1>
       <p class="hero-sub">
-        Silhuetas pensadas para durar. Materiais escolhidos por significado. Design que existe por razão.
+        Tecidos italianos, caimento desenvolvido em ateliê próprio, detalhes que marcas internacionais cobram 5x mais. Moda premium sem o show-off.
       </p>
       <div class="hero-cta-group">
-        <a href="#" class="btn btn-primary btn-lg" onclick="showPage('colecao')">Explorar Coleção</a>
+        <a href="#" class="btn btn-primary btn-lg" onclick="showPage('colecao')">Explorar Coleção →</a>
         <a href="#" class="btn btn-outline-white" onclick="showPage('sobre')">Nossa História</a>
       </div>
-      <div class="hero-trust">
-        <div class="hero-trust-item">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Compra 100% segura
+
+      <!-- Social proof bar -->
+      <div class="hero-social-proof">
+        <div class="hero-avatars">
+          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=80&q=80" alt="" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=80&q=80" alt="" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&q=80" alt="" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&q=80" alt="" loading="lazy" />
         </div>
-        <div class="hero-trust-item">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-          Frete grátis a partir de R$550
-        </div>
-        <div class="hero-trust-item">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
-          Troca sem burocracia em 30 dias
+        <div class="hero-social-text">
+          <span class="hero-social-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </span>
+          <strong>4.9/5</strong> · Mais de <strong>2.400 mulheres</strong> vestindo MAEVEN
         </div>
       </div>
     </div>
@@ -3422,13 +4043,76 @@ input, textarea, select {
     <div class="container">
       <div class="products-section section-header">
         <div>
-          <span class="section-label" style="display:block;margin-bottom:var(--sp-3);">Os favoritos</span>
-          <h2 class="section-title" id="bs-title">Mais Vendidos</h2>
+          <span class="section-label" style="display:block;margin-bottom:var(--sp-3);">Favoritos do mês</span>
+          <h2 class="section-title" id="bs-title">As peças que ninguém consegue tirar da cabeça</h2>
         </div>
         <a href="#" class="view-all-link" onclick="showPage('colecao')">Ver todos →</a>
       </div>
       <div class="products-grid" id="bestsellers-grid">
         <!-- Products injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- BUNDLE SECTION / Compre Junto -->
+  <section class="bundle-section" aria-labelledby="bundle-title">
+    <div class="container bundle-inner">
+      <div class="bundle-header">
+        <span class="section-label">Compre junto · Economize mais</span>
+        <h2 class="section-title" id="bundle-title">O Look Completo.<br /><em>Por menos.</em></h2>
+        <p>Um look coeso montado pelas nossas estilistas. Três peças que funcionam em casa, no escritório e no fim de semana. Leve tudo e economize.</p>
+        <div class="bundle-savings">✦ Economize R$ 380 no combo</div>
+      </div>
+      <div>
+        <div class="bundle-items">
+          <div class="bundle-item">
+            <div class="bundle-check checked" onclick="this.classList.toggle('checked')"></div>
+            <img src="https://images.unsplash.com/photo-1554412933-514a83d2f3c8?w=200&q=80" alt="Blazer Lumière" loading="lazy" />
+            <div>
+              <div class="bundle-item-name">Blazer Lumière</div>
+              <div class="bundle-item-sub">Lã virgem · Ivoire · M</div>
+            </div>
+            <div class="bundle-item-price">R$ 1.190</div>
+          </div>
+          <div class="bundle-item">
+            <div class="bundle-check checked" onclick="this.classList.toggle('checked')"></div>
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=200&q=80" alt="Casaco Brume" loading="lazy" />
+            <div>
+              <div class="bundle-item-name">Casaco Brume</div>
+              <div class="bundle-item-sub">Cashmere · Noir · M</div>
+            </div>
+            <div class="bundle-item-price">R$ 1.890</div>
+          </div>
+          <div class="bundle-item">
+            <div class="bundle-check checked" onclick="this.classList.toggle('checked')"></div>
+            <img src="https://images.unsplash.com/photo-1511175219229-fd9f9e39f889?w=200&q=80" alt="Trench Velouté" loading="lazy" />
+            <div>
+              <div class="bundle-item-name">Trench Velouté</div>
+              <div class="bundle-item-sub">Gabardine · Camel · M</div>
+            </div>
+            <div class="bundle-item-price">R$ 1.490</div>
+          </div>
+        </div>
+        <div class="bundle-total">
+          <div class="bundle-total-row">
+            <span>Comprando separado</span>
+            <span style="text-decoration:line-through;">R$ 4.570</span>
+          </div>
+          <div class="bundle-total-row">
+            <span>Você economiza</span>
+            <span class="bundle-savings-tag">- R$ 380</span>
+          </div>
+          <div class="bundle-total-row grand">
+            <span>Total no combo</span>
+            <span>R$ 4.190</span>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-lg" style="width:100%;margin-top:var(--sp-6);" onclick="addBundleToCart()">
+          Adicionar Combo ao Carrinho →
+        </button>
+        <p style="font-size:var(--text-xs);color:rgba(255,255,255,0.4);text-align:center;margin-top:var(--sp-3);">
+          Frete grátis · 12x de R$ 349 · Troca em 30 dias
+        </p>
       </div>
     </div>
   </section>
@@ -3531,41 +4215,78 @@ input, textarea, select {
   <!-- TESTIMONIALS -->
   <section class="testimonials-section" aria-labelledby="test-title">
     <div class="container">
-      <div class="section-header">
-        <span class="section-label">O que dizem</span>
-        <h2 class="section-title" id="test-title">Palavras que Nos Movem</h2>
+      <div class="section-header" style="text-align:center;margin-bottom:var(--sp-16);">
+        <span class="section-label" style="display:block;margin-bottom:var(--sp-4);">Clientes reais · Reviews verificados</span>
+        <h2 class="section-title" id="test-title">Mulheres que escolheram MAEVEN</h2>
+        <div style="display:inline-flex;align-items:center;gap:var(--sp-6);margin-top:var(--sp-6);padding:var(--sp-4) var(--sp-6);background:var(--cream);border-radius:var(--radius);">
+          <div style="display:flex;align-items:center;gap:var(--sp-2);">
+            <div class="stars">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <strong style="font-family:var(--font-display);font-size:var(--text-xl);">4.9</strong>
+          </div>
+          <div style="font-size:var(--text-xs);color:var(--stone);letter-spacing:0.05em;">Baseado em <strong>2.431 avaliações verificadas</strong></div>
+        </div>
       </div>
       <div class="testimonials-grid">
         <article class="testimonial-card">
-          <div class="testimonial-quote">"</div>
-          <p class="testimonial-text">A calça Marbre chegou e eu parei. A qualidade do tecido é algo que eu nunca tinha sentido em marca nacional. Usou, sentiu diferença.</p>
+          <span class="testimonial-verified">Compra verificada</span>
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3 class="testimonial-title">Nunca mais compro em outro lugar</h3>
+          <p class="testimonial-text">Comprei a Calça Marbre sem grande expectativa. Quando chegou, eu travei. O tecido é outro nível — zero amasso, cai perfeito, parece que foi feita para o meu corpo. Já é a terceira peça MAEVEN que uso toda semana.</p>
           <div class="testimonial-author">
-            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=88&q=80" alt="Foto de Camila R." class="testimonial-avatar" loading="lazy" width="44" height="44" />
+            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=88&q=80" alt="Camila R." class="testimonial-avatar" loading="lazy" width="44" height="44" />
             <div>
               <div class="testimonial-name">Camila R.</div>
-              <div class="testimonial-meta">São Paulo · Cliente desde 2022</div>
+              <div class="testimonial-meta">São Paulo · Cliente há 2 anos · 6 compras</div>
             </div>
           </div>
         </article>
         <article class="testimonial-card">
-          <div class="testimonial-quote">"</div>
-          <p class="testimonial-text">Comprei o Blazer Lumière sem nem ver pessoalmente. Quando abri a embalagem a peça já falava por si só. Detalhes que marcas internacionais cobram 5x mais para ter.</p>
+          <span class="testimonial-verified">Compra verificada</span>
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3 class="testimonial-title">Qualidade de marca internacional</h3>
+          <p class="testimonial-text">Comprei o Blazer Lumière para uma reunião importante. Três clientes me perguntaram se era Max Mara. Custou 1/4 do preço e a qualidade é idêntica. A embalagem já chega contando uma história. Virei fã.</p>
           <div class="testimonial-author">
-            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=88&q=80" alt="Foto de Renata M." class="testimonial-avatar" loading="lazy" width="44" height="44" />
+            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=88&q=80" alt="Renata M." class="testimonial-avatar" loading="lazy" width="44" height="44" />
             <div>
               <div class="testimonial-name">Renata M.</div>
-              <div class="testimonial-meta">Rio de Janeiro · Compra verificada</div>
+              <div class="testimonial-meta">Rio de Janeiro · Cliente há 1 ano · 4 compras</div>
             </div>
           </div>
         </article>
         <article class="testimonial-card">
-          <div class="testimonial-quote">"</div>
-          <p class="testimonial-text">A experiência de compra toda. O site, a entrega embalada, o bilhete escrito à mão. Parece que você é cliente de marca europeia. Nível absolutamente diferente.</p>
+          <span class="testimonial-verified">Compra verificada</span>
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3 class="testimonial-title">Tamanho certo, caimento perfeito</h3>
+          <p class="testimonial-text">Sempre tive problema de caimento em roupa brasileira. MAEVEN é a primeira marca em que o M é realmente M e o tecido acompanha o corpo sem marcar. Pedido chegou em 3 dias, embalado impecável. Ganhou uma cliente pra sempre.</p>
           <div class="testimonial-author">
-            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=88&q=80" alt="Foto de Juliana P." class="testimonial-avatar" loading="lazy" width="44" height="44" />
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=88&q=80" alt="Juliana P." class="testimonial-avatar" loading="lazy" width="44" height="44" />
             <div>
               <div class="testimonial-name">Juliana P.</div>
-              <div class="testimonial-meta">Belo Horizonte · 4 compras</div>
+              <div class="testimonial-meta">Belo Horizonte · Cliente há 8 meses · 3 compras</div>
             </div>
           </div>
         </article>
@@ -3576,9 +4297,10 @@ input, textarea, select {
   <!-- NEWSLETTER -->
   <section class="newsletter-section" aria-labelledby="nl-title">
     <div class="container" style="position:relative;z-index:1;">
-      <span class="section-label">Fique por dentro</span>
-      <h2 class="section-title" id="nl-title">Para quem sabe<br />o que quer.</h2>
-      <p class="newsletter-subtitle">Novas coleções, acesso antecipado e curadoria exclusiva — direto para quem entende que moda é intenção.</p>
+      <span class="section-label">Oferta exclusiva</span>
+      <h2 class="section-title" id="nl-title">Ganhe <em>10% OFF</em><br />na primeira compra.</h2>
+      <div class="newsletter-gift">✦ Cupom enviado em 30 segundos</div>
+      <p class="newsletter-subtitle">Entre para a lista MAEVEN e receba acesso antecipado a lançamentos, curadoria privada e descontos exclusivos.</p>
       <form class="newsletter-form" onsubmit="handleNewsletter(event)" novalidate>
         <input
           type="email"
@@ -3587,9 +4309,9 @@ input, textarea, select {
           aria-label="Endereço de e-mail"
           required
         />
-        <button type="submit" class="btn btn-primary">Entrar</button>
+        <button type="submit" class="btn btn-primary">Quero meu 10% OFF →</button>
       </form>
-      <p class="newsletter-disclaimer">Privacidade garantida. Sem spam. Cancele a qualquer momento.</p>
+      <p class="newsletter-disclaimer">Sem spam. Cancele quando quiser.</p>
     </div>
   </section>
 
@@ -3612,14 +4334,14 @@ input, textarea, select {
   <!-- CTA FINAL -->
   <section style="padding:var(--sp-24) 0;background:var(--cream);text-align:center;" aria-label="Chamada final">
     <div class="container">
-      <span class="section-label" style="display:block;margin-bottom:var(--sp-4);">Não espere mais</span>
+      <span class="section-label" style="display:block;margin-bottom:var(--sp-4);">Comece agora</span>
       <h2 style="font-family:var(--font-display);font-size:clamp(2rem,4vw,3.5rem);font-weight:300;margin-bottom:var(--sp-6);line-height:1.1;">
-        Sua próxima peça favorita<br />já está aqui.
+        Sua próxima peça favorita<br /><em>já está esperando.</em>
       </h2>
-      <p style="font-size:var(--text-sm);color:var(--stone);max-width:400px;margin:0 auto var(--sp-10);line-height:1.7;">
-        Explore a coleção completa. Cada peça pensada para uma mulher que se recusa a ser ordinária.
+      <p style="font-size:var(--text-sm);color:var(--stone);max-width:460px;margin:0 auto var(--sp-10);line-height:1.7;">
+        Mais de 2.400 mulheres já fizeram da MAEVEN seu guarda-roupa. Frete grátis, troca em 30 dias, e a garantia de que você vai receber exatamente o que viu — ou devolvemos seu dinheiro.
       </p>
-      <a href="#" class="btn btn-primary btn-lg" onclick="showPage('colecao')">Explorar Coleção Completa</a>
+      <a href="#" class="btn btn-primary btn-lg" onclick="showPage('colecao')">Explorar Coleção Completa →</a>
     </div>
   </section>
 
@@ -3679,10 +4401,18 @@ input, textarea, select {
     </div>
 
     <!-- SEO Text -->
-    <div style="margin-top:var(--sp-16);padding-top:var(--sp-8);border-top:1px solid var(--mist);">
-      <h2 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:300;margin-bottom:var(--sp-4);">Moda Premium Feminina — Coleção Outono 2025</h2>
-      <p style="font-size:var(--text-xs);color:var(--stone);line-height:1.8;max-width:760px;">
-        A MAEVEN apresenta sua coleção de moda premium feminina com peças cuidadosamente desenvolvidas para mulheres contemporâneas que valorizam caimento, qualidade e intenção em cada detalhe. Explore vestidos, blazers, calças e acessórios criados com materiais selecionados e produção artesanal.
+    <div style="margin-top:var(--sp-16);padding-top:var(--sp-8);border-top:1px solid var(--mist);max-width:800px;">
+      <h2 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:300;margin-bottom:var(--sp-4);">Moda premium feminina com caimento impecável</h2>
+      <p style="font-size:var(--text-sm);color:var(--stone);line-height:1.8;margin-bottom:var(--sp-4);">
+        A MAEVEN apresenta a coleção Outono 2025 com peças cuidadosamente desenvolvidas para mulheres contemporâneas que valorizam qualidade, caimento e intenção em cada detalhe. Nossos vestidos, blazers, calças e acessórios são produzidos com tecidos italianos, portugueses e japoneses — escolhidos por sua durabilidade, toque e comportamento ao longo do tempo.
+      </p>
+      <h3 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:400;margin-bottom:var(--sp-3);margin-top:var(--sp-6);">O que define uma peça MAEVEN</h3>
+      <p style="font-size:var(--text-sm);color:var(--stone);line-height:1.8;margin-bottom:var(--sp-4);">
+        Cada peça passa por inspeção manual no nosso ateliê em São Paulo. Verificamos costura, caimento, acabamento e alinhamento antes de enviar. Por isso oferecemos garantia de 30 dias — se a peça não atender suas expectativas, devolvemos 100% do valor sem questionamentos.
+      </p>
+      <h3 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:400;margin-bottom:var(--sp-3);margin-top:var(--sp-6);">Frete grátis, entrega rápida, troca garantida</h3>
+      <p style="font-size:var(--text-sm);color:var(--stone);line-height:1.8;">
+        Frete grátis em compras acima de R$ 550, para todo o Brasil. Capitais recebem em 2 a 4 dias úteis. Você tem 30 dias para trocar ou devolver qualquer peça — e a retirada é feita em casa, sem custo algum.
       </p>
     </div>
 
@@ -3801,6 +4531,14 @@ input, textarea, select {
         </div>
       </div>
 
+      <!-- Trust callout -->
+      <div style="padding:var(--sp-4) var(--sp-5);background:var(--cream);border-left:2px solid var(--gold);margin-bottom:var(--sp-8);display:flex;align-items:center;gap:var(--sp-3);">
+        <svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.5;flex-shrink:0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span style="font-size:var(--text-xs);color:var(--charcoal);">
+          <strong>Ambiente 100% seguro.</strong> Seus dados são criptografados com SSL. Nunca compartilhamos informações.
+        </span>
+      </div>
+
       <!-- Identificação -->
       <div class="checkout-section">
         <h2 class="checkout-section-title">Identificação</h2>
@@ -3881,9 +4619,9 @@ input, textarea, select {
       <!-- Pagamento -->
       <div class="checkout-section">
         <h2 class="checkout-section-title">Pagamento</h2>
-        <div style="display:flex;gap:var(--sp-3);margin-bottom:var(--sp-6);">
+        <div style="display:flex;gap:var(--sp-3);margin-bottom:var(--sp-6);flex-wrap:wrap;">
           <button class="filter-chip active" onclick="selectPayment(this,'card')">Cartão</button>
-          <button class="filter-chip" onclick="selectPayment(this,'pix')">Pix</button>
+          <button class="filter-chip" onclick="selectPayment(this,'pix')">Pix <span style="color:var(--success);font-weight:600;">-5%</span></button>
           <button class="filter-chip" onclick="selectPayment(this,'boleto')">Boleto</button>
         </div>
         <div id="payment-card" class="form-grid">
@@ -3924,60 +4662,40 @@ input, textarea, select {
         </div>
       </div>
 
-      <button class="btn btn-primary btn-lg" style="width:100%;" onclick="showToast('🎉 Pedido realizado com sucesso! Você receberá um e-mail de confirmação.')">
-        Finalizar Pedido
+      <button class="btn btn-primary btn-lg" style="width:100%;" onclick="finalizeOrder()">
+        🔒 Finalizar Pedido com Segurança →
       </button>
+      <p style="font-size:var(--text-xs);color:var(--stone);text-align:center;margin-top:var(--sp-3);">
+        Ao finalizar você concorda com nossos termos. Seus dados são protegidos por SSL.
+      </p>
     </div>
 
     <!-- Summary -->
     <aside class="checkout-summary">
       <h2 class="checkout-summary-title">Resumo do Pedido</h2>
-      <div class="checkout-summary-items">
-        <div class="checkout-summary-item">
-          <div style="position:relative;">
-            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=120&q=80" alt="Vestido Ébène" class="checkout-summary-img" loading="lazy" width="60" height="76" />
-            <div class="checkout-summary-img-badge">1</div>
-          </div>
-          <div>
-            <div class="checkout-summary-item-name">Vestido Ébène</div>
-            <div class="checkout-summary-item-variant">Noir · P</div>
-          </div>
-          <div style="font-size:var(--text-sm);font-weight:500;">R$ 890</div>
-        </div>
-        <div class="checkout-summary-item">
-          <div style="position:relative;">
-            <img src="https://images.unsplash.com/photo-1554412933-514a83d2f3c8?w=120&q=80" alt="Blazer Lumière" class="checkout-summary-img" loading="lazy" width="60" height="76" />
-            <div class="checkout-summary-img-badge">1</div>
-          </div>
-          <div>
-            <div class="checkout-summary-item-name">Blazer Lumière</div>
-            <div class="checkout-summary-item-variant">Ivoire · M</div>
-          </div>
-          <div style="font-size:var(--text-sm);font-weight:500;">R$ 1.190</div>
-        </div>
-      </div>
+      <div class="checkout-summary-items" id="checkout-summary-items"></div>
 
       <div class="checkout-coupon">
         <input type="text" placeholder="Código de desconto" aria-label="Cupom de desconto" />
-        <button class="btn btn-outline-dark btn-sm" onclick="showToast('Cupom aplicado! -10%')">Aplicar</button>
+        <button class="btn btn-outline-dark btn-sm" onclick="applyCoupon()">Aplicar</button>
       </div>
 
       <div class="checkout-totals">
         <div class="checkout-total-row">
           <span>Subtotal</span>
-          <span>R$ 2.080</span>
+          <span id="ch-subtotal">R$ 0</span>
         </div>
         <div class="checkout-total-row">
           <span>Frete</span>
-          <span style="color:var(--success);">Grátis</span>
+          <span id="ch-shipping" style="color:var(--success);">Grátis</span>
         </div>
         <div class="checkout-total-row">
           <span>Desconto</span>
-          <span>—</span>
+          <span id="ch-discount">—</span>
         </div>
         <div class="checkout-total-row grand">
           <span>Total</span>
-          <span>R$ 2.080</span>
+          <span id="ch-total">R$ 0</span>
         </div>
       </div>
 
@@ -4174,20 +4892,21 @@ input, textarea, select {
    ==================================================== */
 const products = [
   {
-    id: 1,
-    name: "Vestido Ébène",
-    category: "Vestidos",
-    sub: "Tecido crepe italiano de queda impecável. Para a mulher que não precisa tentar.",
-    price: "R$ 890",
-    priceNum: 890,
-    originalPrice: null,
-    installments: "ou 12x de R$ 74,16 sem juros",
-    badges: ["bestseller"],
+    id: 1, name: "Vestido Ébène", category: "Vestidos",
+    sub: "Crepe italiano de queda impecável. Para quando você quer ser lembrada.",
+    price: "R$ 890", priceNum: 890, originalPrice: null,
+    installments: "12x de R$ 74 sem juros",
+    badges: ["bestseller","hot"],
     img: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80",
     hoverImg: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&q=80",
     colors: ["#1a1a1a","#6b6b6b","#e8d5c9"],
-    rating: 4.8,
-    reviews: 124
+    rating: 4.9, reviews: 124, stock: 4, viewing: 17,
+    reviewsDetail: [
+      {name:"Camila R.", date:"Há 2 semanas", rating:5, text:"Parei no espelho quando vesti. Tecido, caimento, acabamento — tudo outro nível. Já é o segundo que compro.", meta:"Tamanho P · Cor Noir"},
+      {name:"Isabela M.", date:"Há 1 mês", rating:5, text:"Fui para um evento e três pessoas perguntaram onde comprei. Vale cada centavo.", meta:"Tamanho M · Cor Gris"},
+      {name:"Fernanda T.", date:"Há 1 mês", rating:5, text:"Chegou em 3 dias, embalado como presente. O vestido veste como se fosse sob medida.", meta:"Tamanho M · Cor Noir"},
+      {name:"Bárbara L.", date:"Há 2 meses", rating:4, text:"Adorei o caimento. Só achei que poderia ter um forro um pouco mais espesso.", meta:"Tamanho G · Cor Blush"}
+    ]
   },
   {
     id: 2,
@@ -4203,7 +4922,8 @@ const products = [
     hoverImg: "https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?w=600&q=80",
     colors: ["#f5f0e8","#1a1a1a","#c9a96e"],
     rating: 4.9,
-    reviews: 87
+    reviews: 87, stock: 6, viewing: 23,
+  reviewsDetail: [{"name": "Renata M.", "date": "Há 3 semanas", "rating": 5, "text": "Me perguntaram se era Max Mara em reunião. Caimento impecável, zero ajustes.", "meta": "Tam. 40 · Ivoire"}, {"name": "Luciana A.", "date": "Há 1 mês", "rating": 5, "text": "Forro de cetim, botões pesados, acabamento interno visível só em marca italiana.", "meta": "Tam. 42 · Noir"}, {"name": "Giovana S.", "date": "Há 2 meses", "rating": 5, "text": "Uso semanal há meses. Zero desgaste. Vale cada real.", "meta": "Tam. 38 · Ivoire"}]
   },
   {
     id: 3,
@@ -4219,7 +4939,8 @@ const products = [
     hoverImg: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&q=80",
     colors: ["#2c2c2c","#f5f0e8","#d4d0ca"],
     rating: 4.7,
-    reviews: 93
+    reviews: 93, stock: 8, viewing: 14,
+  reviewsDetail: [{"name": "Ana Paula V.", "date": "Há 1 semana", "rating": 5, "text": "Finalmente um M que é M, e tecido que não amassa sentado.", "meta": "Tam. M · Graphite"}, {"name": "Juliana P.", "date": "Há 3 semanas", "rating": 5, "text": "Comprei 3 cores. Uso todos os dias. Melhor calça que já tive.", "meta": "Tam. G · Ivoire"}, {"name": "Daniela C.", "date": "Há 1 mês", "rating": 4, "text": "Ótima calça, só a cintura um pouco alta.", "meta": "Tam. P · Mist"}]
   },
   {
     id: 4,
@@ -4235,7 +4956,8 @@ const products = [
     hoverImg: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&q=80",
     colors: ["#c9a96e","#1a1a1a","#d4d0ca"],
     rating: 5.0,
-    reviews: 41
+    reviews: 41, stock: 3, viewing: 31,
+  reviewsDetail: [{"name": "Mariana B.", "date": "Há 2 semanas", "rating": 5, "text": "Casaco absurdo. Quem vê não acredita que é brasileiro.", "meta": "Tam. M · Brume"}, {"name": "Paula C.", "date": "Há 1 mês", "rating": 5, "text": "Lã cashmere de verdade. Peso, caimento, tudo perfeito.", "meta": "Tam. G · Noir"}]
   },
   {
     id: 5,
@@ -4251,7 +4973,8 @@ const products = [
     hoverImg: "https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?w=600&q=80",
     colors: ["#6b6b6b","#1a1a1a"],
     rating: 4.6,
-    reviews: 58
+    reviews: 58, stock: 5, viewing: 12,
+  reviewsDetail: [{"name": "Carolina R.", "date": "Há 2 semanas", "rating": 5, "text": "Linho de qualidade rara. Veste lindo, cai muito bem.", "meta": "Tam. M · Sable"}, {"name": "Beatriz L.", "date": "Há 1 mês", "rating": 4, "text": "Lindo, só pena que o linho amassa um pouco, mas é característica do tecido.", "meta": "Tam. P · Noir"}]
   },
   {
     id: 6,
@@ -4267,7 +4990,8 @@ const products = [
     hoverImg: "https://images.unsplash.com/photo-1550614000-4895a10e1bfd?w=600&q=80",
     colors: ["#1a1a1a","#8b2020","#2c2c2c"],
     rating: 4.8,
-    reviews: 72
+    reviews: 72, stock: 7, viewing: 9,
+  reviewsDetail: [{"name": "Larissa N.", "date": "Há 3 semanas", "rating": 5, "text": "Saia elegantíssima. Combinei com tudo.", "meta": "Tam. M · Obsidienne"}]
   },
   {
     id: 7,
@@ -4283,7 +5007,8 @@ const products = [
     hoverImg: "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?w=600&q=80",
     colors: ["#ffffff","#f5f0e8","#1a1a1a","#e8d5c9"],
     rating: 4.5,
-    reviews: 106
+    reviews: 106, stock: 10, viewing: 7,
+  reviewsDetail: [{"name": "Natália S.", "date": "Há 1 semana", "rating": 5, "text": "Algodão egípcio faz diferença absurda. Camisa que dura.", "meta": "Tam. M · Ivoire"}]
   },
   {
     id: 8,
@@ -4299,7 +5024,8 @@ const products = [
     hoverImg: "https://images.unsplash.com/photo-1518622358385-8ea7d0794bf6?w=600&q=80",
     colors: ["#e8d5c9","#c9a96e","#1a1a1a"],
     rating: 4.9,
-    reviews: 36
+    reviews: 36, stock: 2, viewing: 19,
+  reviewsDetail: [{"name": "Amanda F.", "date": "Há 2 semanas", "rating": 5, "text": "O degradê é absolutamente lindo. Chamou atenção em todo lugar.", "meta": "Tam. P · Aurore"}]
   },
   {
     id: 9,
@@ -4315,7 +5041,8 @@ const products = [
     hoverImg: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&q=80",
     colors: ["#1a1a1a","#6b6b6b","#c9a96e"],
     rating: 4.7,
-    reviews: 49
+    reviews: 49, stock: 12, viewing: 5,
+  reviewsDetail: [{"name": "Sofia K.", "date": "Há 3 semanas", "rating": 5, "text": "Fivela dourada linda. Couro italiano real.", "meta": "Tamanho M"}]
   },
   {
     id: 10,
@@ -4331,7 +5058,8 @@ const products = [
     hoverImg: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=600&q=80",
     colors: ["#c9a96e","#6b6b6b","#1a1a1a"],
     rating: 4.8,
-    reviews: 63
+    reviews: 63, stock: 4, viewing: 21,
+  reviewsDetail: [{"name": "Vanessa P.", "date": "Há 1 semana", "rating": 5, "text": "Trench clássico perfeito. Forro de seda é um luxo.", "meta": "Tam. M · Camel"}, {"name": "Tatiana M.", "date": "Há 1 mês", "rating": 5, "text": "Peça que usarei 10 anos. Vale muito.", "meta": "Tam. G · Noir"}]
   },
   {
     id: 11,
@@ -4347,7 +5075,8 @@ const products = [
     hoverImg: "https://images.unsplash.com/photo-1564584217132-2271feaeb3c5?w=600&q=80",
     colors: ["#f5f0e8","#e8d5c9","#1a1a1a"],
     rating: 4.6,
-    reviews: 29
+    reviews: 29, stock: 9, viewing: 6,
+  reviewsDetail: [{"name": "Priscila D.", "date": "Há 2 semanas", "rating": 4, "text": "Seda linda. Só atenção para lavar a mão.", "meta": "Tam. M · Ivoire"}]
   },
   {
     id: 12,
@@ -4363,7 +5092,8 @@ const products = [
     hoverImg: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&q=80",
     colors: ["#2c2c2c","#1a1a1a","#f5f0e8"],
     rating: 4.7,
-    reviews: 81
+    reviews: 81, stock: 6, viewing: 11,
+  reviewsDetail: [{"name": "Helena G.", "date": "Há 1 semana", "rating": 5, "text": "Palazzo que cai lindo em qualquer ocasião.", "meta": "Tam. M · Charbon"}]
   }
 ];
 
@@ -4398,7 +5128,8 @@ const faqData = [
    RENDER PRODUCTS
    ==================================================== */
 function renderProductCard(p, idx = 0) {
-  const badgeHTML = p.badges.map(b => `<span class="badge badge-${b}">${b === 'new' ? 'Novo' : b === 'bestseller' ? 'Mais Vendido' : b === 'limited' ? 'Ed. Limitada' : 'Sale'}</span>`).join('');
+  const badgeLabels = {new:'Novo',bestseller:'Mais Vendido',limited:'Ed. Limitada',sale:'Sale',hot:'Últimas peças'};
+  const badgeHTML = (p.badges||[]).map(b => `<span class="badge badge-${b}">${badgeLabels[b]||b}</span>`).join('');
   const starsHTML = Array.from({length:5}, (_,i) =>
     `<svg viewBox="0 0 24 24" class="${i < Math.floor(p.rating) ? '' : 'empty'}" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`
   ).join('');
@@ -4408,18 +5139,21 @@ function renderProductCard(p, idx = 0) {
   const priceHTML = p.originalPrice
     ? `<span class="price price-sale">${p.price}</span><span class="price price-original">${p.originalPrice}</span>`
     : `<span class="price">${p.price}</span>`;
+  const installmentHTML = p.installments ? `<div class="price-installment">${p.installments}</div>` : '';
+  const stockWarning = (p.stock && p.stock <= 5) ? `<div class="stock-warning">⚡ Apenas ${p.stock} unidades</div>` : '';
 
   return `
     <article class="product-card" onclick="openPDP(${p.id})" aria-label="Produto: ${p.name}">
       <div class="product-card-media">
-        <img src="${p.img}" alt="${p.name}" loading="lazy" width="300" height="400" />
+        <img src="${p.img}" alt="${p.name} MAEVEN — ${p.category} premium" loading="lazy" width="300" height="400" />
         <img src="${p.hoverImg}" alt="${p.name} — vista alternativa" loading="lazy" width="300" height="400" class="img-hover" />
         <div class="product-badges">${badgeHTML}</div>
+        ${stockWarning}
         <button class="product-card-wishlist" aria-label="Adicionar à lista de desejos" onclick="event.stopPropagation();toggleWishlist(this)">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
         </button>
         <div class="product-card-actions">
-          <button class="quick-add-btn" onclick="event.stopPropagation();addToCart('${p.name}')" aria-label="Adicionar ao carrinho">Adicionar ao Carrinho</button>
+          <button class="quick-add-btn" onclick="event.stopPropagation();addToCart(${p.id})" aria-label="Adicionar ao carrinho">+ Quero essa</button>
           <button class="quick-view-btn" onclick="event.stopPropagation();openPDP(${p.id})" aria-label="Ver detalhes">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
           </button>
@@ -4428,10 +5162,10 @@ function renderProductCard(p, idx = 0) {
       <div class="product-card-info">
         <div class="product-card-category">${p.category}</div>
         <h3 class="product-card-name">${p.name}</h3>
-        <div class="product-card-pricing">${priceHTML}</div>
+        <div class="product-card-pricing">${priceHTML}${installmentHTML}</div>
         <div class="product-card-rating">
           <div class="stars" aria-label="Avaliação: ${p.rating} de 5">${starsHTML}</div>
-          <span class="rating-count">(${p.reviews})</span>
+          <span class="rating-count">${p.rating} (${p.reviews})</span>
         </div>
         <div class="product-card-colors" role="group" aria-label="Cores disponíveis">${colorsHTML}</div>
       </div>
@@ -4536,59 +5270,300 @@ document.addEventListener('keydown', e => {
 });
 
 /* ====================================================
-   CART
+   CART ENGINE — localStorage + dynamic
    ==================================================== */
+const STORAGE_KEY = 'maeven_cart_v2';
+const FREE_SHIPPING_THRESHOLD = 550;
+let cart = [];
 let cartOpen = false;
+let currentPDPProduct = null;
+
+// Load cart from localStorage
+function loadCart() {
+  try {
+    const data = localStorage.getItem(STORAGE_KEY);
+    cart = data ? JSON.parse(data) : [];
+  } catch(e) { cart = []; }
+}
+
+function saveCart() {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(cart)); } catch(e) {}
+}
+
+// Add item to cart
+function addToCart(productId, options = {}) {
+  const p = products.find(x => x.id === productId);
+  if (!p) return;
+
+  const variant = options.variant || 'Noir · M';
+  const qty = options.qty || 1;
+  const existingIdx = cart.findIndex(item => item.id === productId && item.variant === variant);
+
+  if (existingIdx > -1) {
+    cart[existingIdx].qty += qty;
+  } else {
+    cart.push({
+      id: p.id,
+      name: p.name,
+      price: p.priceNum,
+      img: p.img,
+      variant: variant,
+      qty: qty
+    });
+  }
+  saveCart();
+  renderCart();
+  animateCartBadge();
+  showToast(`✓ ${p.name} adicionado ao carrinho`);
+}
+
+// Remove item
+function removeCartItem(index) {
+  cart.splice(index, 1);
+  saveCart();
+  renderCart();
+}
+
+// Update qty
+function updateCartQty(index, delta) {
+  if (!cart[index]) return;
+  cart[index].qty += delta;
+  if (cart[index].qty < 1) cart[index].qty = 1;
+  if (cart[index].qty > 10) cart[index].qty = 10;
+  saveCart();
+  renderCart();
+}
+
+// Calculate totals
+function cartSubtotal() {
+  return cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+}
+function cartItemCount() {
+  return cart.reduce((sum, item) => sum + item.qty, 0);
+}
+function formatBRL(v) {
+  return 'R$ ' + v.toLocaleString('pt-BR', {minimumFractionDigits: 0, maximumFractionDigits: 0});
+}
+
+// Render cart UI
+function renderCart() {
+  const badge = document.getElementById('cart-badge');
+  const countLabel = document.getElementById('cart-count-label');
+  const itemsContainer = document.getElementById('cart-items-container');
+  const footer = document.getElementById('cart-footer');
+  const upsellEl = document.getElementById('cart-upsell');
+  const upsellItems = document.getElementById('cart-upsell-items');
+
+  const count = cartItemCount();
+  const subtotal = cartSubtotal();
+
+  // Badge
+  if (badge) badge.textContent = count;
+
+  // Label
+  if (countLabel) {
+    countLabel.textContent = count === 0 ? 'Vazio' : count === 1 ? '1 item' : `${count} itens`;
+  }
+
+  // Empty state
+  if (count === 0) {
+    if (itemsContainer) {
+      itemsContainer.innerHTML = `
+        <div class="cart-empty">
+          <svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <h3>Seu carrinho está vazio</h3>
+          <p>Descubra peças feitas para marcar — sem precisar dizer uma palavra.</p>
+          <button class="btn btn-primary" onclick="toggleCart();showPage('colecao')">Explorar Coleção →</button>
+        </div>`;
+    }
+    if (footer) footer.style.display = 'none';
+    if (upsellEl) upsellEl.style.display = 'none';
+    updateShippingProgress(0);
+    return;
+  }
+
+  // Items
+  if (itemsContainer) {
+    itemsContainer.innerHTML = `<div class="cart-items">${cart.map((item, i) => `
+      <div class="cart-item">
+        <img src="${item.img}" alt="${item.name}" class="cart-item-img" loading="lazy" width="80" height="100" />
+        <div>
+          <div class="cart-item-name">${item.name}</div>
+          <div class="cart-item-variant">${item.variant}</div>
+          <div class="cart-item-qty">
+            <button class="qty-btn" onclick="updateCartQty(${i},-1)" ${item.qty<=1?'disabled':''} aria-label="Diminuir">−</button>
+            <span class="qty-value">${item.qty}</span>
+            <button class="qty-btn" onclick="updateCartQty(${i},1)" aria-label="Aumentar">+</button>
+          </div>
+        </div>
+        <div class="cart-item-right">
+          <div class="cart-item-price">${formatBRL(item.price * item.qty)}</div>
+          <button class="cart-item-remove" onclick="removeCartItem(${i})">Remover</button>
+        </div>
+      </div>`).join('')}</div>`;
+  }
+
+  // Upsell — mostrar itens que não estão no carrinho
+  if (upsellEl && upsellItems) {
+    const cartIds = cart.map(i => i.id);
+    const suggestions = products.filter(p => !cartIds.includes(p.id)).slice(0, 2);
+    if (suggestions.length > 0) {
+      upsellItems.innerHTML = suggestions.map(p => `
+        <div class="cart-upsell-item">
+          <img src="${p.img}" alt="${p.name}" class="cart-upsell-img" loading="lazy" width="52" height="68" />
+          <div style="flex:1;min-width:0;">
+            <div class="cart-upsell-name">${p.name}</div>
+            <div class="cart-upsell-price">${p.price}</div>
+          </div>
+          <button class="cart-upsell-add" onclick="addToCart(${p.id})">+ Adicionar</button>
+        </div>`).join('');
+      upsellEl.style.display = 'block';
+    }
+  }
+
+  // Footer with totals
+  if (footer) {
+    footer.style.display = 'block';
+    const shippingCost = subtotal >= FREE_SHIPPING_THRESHOLD ? 0 : 29.90;
+    const total = subtotal + shippingCost;
+
+    document.getElementById('cart-subtotal').textContent = formatBRL(subtotal);
+    document.getElementById('cart-shipping').innerHTML = shippingCost === 0
+      ? '<span style="color:#2e7d4f;font-weight:500;">Grátis ✓</span>'
+      : formatBRL(shippingCost);
+    document.getElementById('cart-total').textContent = formatBRL(total);
+  }
+
+  updateShippingProgress(subtotal);
+  renderCheckoutSummary();
+}
+
+// Shipping progress bar
+function updateShippingProgress(subtotal) {
+  const textEl = document.getElementById('shipping-progress-text');
+  const fillEl = document.getElementById('shipping-progress-fill');
+  if (!textEl || !fillEl) return;
+
+  const remaining = Math.max(0, FREE_SHIPPING_THRESHOLD - subtotal);
+  const pct = Math.min(100, (subtotal / FREE_SHIPPING_THRESHOLD) * 100);
+
+  if (remaining === 0) {
+    textEl.innerHTML = `<strong>✓ Você ganhou frete grátis!</strong>`;
+  } else {
+    textEl.innerHTML = `Faltam <strong>${formatBRL(remaining)}</strong> para frete grátis`;
+  }
+  fillEl.style.width = pct + '%';
+}
+
+// Animate badge
+function animateCartBadge() {
+  const badge = document.getElementById('cart-badge');
+  if (!badge) return;
+  badge.style.animation = 'none';
+  void badge.offsetWidth; // reflow
+  badge.style.animation = 'bump 0.4s ease';
+}
+
+// Toggle cart drawer
 function toggleCart(force) {
   cartOpen = force !== undefined ? force : !cartOpen;
   document.getElementById('cart-drawer').classList.toggle('active', cartOpen);
   document.getElementById('cart-overlay').classList.toggle('active', cartOpen);
   document.body.style.overflow = cartOpen ? 'hidden' : '';
+  if (cartOpen) renderCart();
 }
 
-function updateQty(btn, delta) {
-  const span = btn.parentElement.querySelector('.qty-value');
-  let v = parseInt(span.textContent) + delta;
-  if (v < 1) v = 1;
-  span.textContent = v;
-  updateCartTotal();
-}
-
-function removeItem(btn) {
-  btn.closest('.cart-item').style.opacity = '0';
-  btn.closest('.cart-item').style.transform = 'translateX(40px)';
-  btn.closest('.cart-item').style.transition = 'all 0.3s ease';
-  setTimeout(() => btn.closest('.cart-item').remove(), 300);
-  showToast('Item removido do carrinho.');
-  updateCartTotal();
-}
-
-function updateCartTotal() {
-  const items = document.querySelectorAll('.cart-item');
-  let total = 0;
-  const prices = [890, 1190];
-  items.forEach((item, i) => {
-    const qty = parseInt(item.querySelector('.qty-value')?.textContent || 0);
-    total += (prices[i] || 500) * qty;
+// Bundle adder
+function addBundleToCart() {
+  // Adiciona os 3 produtos do bundle (IDs 2, 4, 10 no catálogo)
+  [2, 4, 10].forEach(id => {
+    const p = products.find(x => x.id === id);
+    if (p) {
+      cart.push({id: p.id, name: p.name, price: p.priceNum, img: p.img, variant: 'Noir · M', qty: 1});
+    }
   });
-  const el = document.getElementById('cart-total');
-  if (el) el.textContent = `R$ ${total.toLocaleString('pt-BR')}`;
+  saveCart();
+  renderCart();
+  animateCartBadge();
+  showToast('✓ Combo adicionado! Você economizou R$ 380');
+  setTimeout(() => toggleCart(true), 400);
 }
 
-function addToCart(name) {
-  const badge = document.getElementById('cart-badge');
-  let count = parseInt(badge.textContent || 0) + 1;
-  badge.textContent = count;
-  badge.style.animation = 'pulse-ring 0.4s ease';
-  setTimeout(() => badge.style.animation = '', 400);
-  showToast(`✓ ${name || 'Produto'} adicionado ao carrinho!`);
+// Checkout summary render
+function renderCheckoutSummary() {
+  const container = document.getElementById('checkout-summary-items');
+  if (!container) return;
+  if (cart.length === 0) {
+    container.innerHTML = '<p style="font-size:var(--text-sm);color:var(--stone);text-align:center;padding:var(--sp-6) 0;">Seu carrinho está vazio.</p>';
+    return;
+  }
+  container.innerHTML = cart.map(item => `
+    <div class="checkout-summary-item">
+      <div style="position:relative;">
+        <img src="${item.img}" alt="${item.name}" class="checkout-summary-img" loading="lazy" width="60" height="76" />
+      </div>
+      <div>
+        <div class="checkout-summary-item-name">${item.name}</div>
+        <div class="checkout-summary-item-variant">${item.variant} · Qtd. ${item.qty}</div>
+      </div>
+      <div style="font-size:var(--text-sm);font-weight:500;">${formatBRL(item.price * item.qty)}</div>
+    </div>`).join('');
+
+  const subtotal = cartSubtotal();
+  const shipping = subtotal >= FREE_SHIPPING_THRESHOLD ? 0 : 29.90;
+  const total = subtotal + shipping;
+
+  const sub = document.getElementById('ch-subtotal');
+  const shi = document.getElementById('ch-shipping');
+  const tot = document.getElementById('ch-total');
+  if (sub) sub.textContent = formatBRL(subtotal);
+  if (shi) shi.innerHTML = shipping === 0 ? '<span style="color:#2e7d4f;">Grátis ✓</span>' : formatBRL(shipping);
+  if (tot) tot.textContent = formatBRL(total);
 }
 
-function addLookToCart() {
-  showToast('✓ Look completo adicionado ao carrinho!');
-  const badge = document.getElementById('cart-badge');
-  badge.textContent = parseInt(badge.textContent) + 3;
+function applyCoupon() {
+  const input = document.querySelector('.checkout-coupon input');
+  if (!input || !input.value.trim()) return;
+  showToast('✓ Cupom aplicado! 10% de desconto');
+  const disc = document.getElementById('ch-discount');
+  if (disc) {
+    const subtotal = cartSubtotal();
+    const discount = subtotal * 0.10;
+    disc.textContent = '- ' + formatBRL(discount);
+    // Update total
+    const shipping = subtotal >= FREE_SHIPPING_THRESHOLD ? 0 : 29.90;
+    document.getElementById('ch-total').textContent = formatBRL(subtotal - discount + shipping);
+  }
 }
+
+function finalizeOrder() {
+  if (cart.length === 0) {
+    showToast('Seu carrinho está vazio');
+    return;
+  }
+  showToast('🎉 Pedido realizado! Você receberá e-mail de confirmação em instantes.');
+  setTimeout(() => {
+    cart = [];
+    saveCart();
+    renderCart();
+    showPage('home');
+  }, 2000);
+}
+
+function selectPayment(btn, type) {
+  btn.parentElement.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  ['card','pix','boleto'].forEach(t => {
+    const el = document.getElementById('payment-' + t);
+    if (el) el.style.display = t === type ? (t === 'card' ? 'grid' : 'block') : 'none';
+  });
+}
+
+/* ====================================================
+   Backwards compat (old removeItem/updateQty funcs)
+   ==================================================== */
+function updateQty() { /* legacy no-op */ }
+function removeItem() { /* legacy no-op */ }
 
 /* ====================================================
    MOBILE MENU
@@ -4603,27 +5578,134 @@ function toggleMenu() {
 }
 
 /* ====================================================
-   PDP / QUICK VIEW
+   PDP — conversion-optimized
    ==================================================== */
 function openPDP(id) {
   const p = products.find(x => x.id === id);
   if (!p) return;
-  document.getElementById('pdp-img').src = p.img;
+  currentPDPProduct = p;
+
+  document.getElementById('pdp-img').src = p.img.replace('w=600','w=800');
   document.getElementById('pdp-img').alt = p.name;
   document.getElementById('pdp-category').textContent = p.category;
   document.getElementById('pdp-title').textContent = p.name;
   document.getElementById('pdp-sub').textContent = p.sub;
   document.getElementById('pdp-price').textContent = p.price;
-  document.getElementById('pdp-installments').textContent = p.installments;
+  document.getElementById('pdp-installments').textContent = p.installments || '';
+
+  // Pix price (5% off)
+  const pixPrice = p.priceNum * 0.95;
+  const pixEl = document.getElementById('pdp-pix-price');
+  if (pixEl) pixEl.textContent = formatBRL(pixPrice);
+
+  // Rating
+  const starsEl = document.getElementById('pdp-stars');
+  if (starsEl) {
+    starsEl.innerHTML = Array.from({length:5}, (_,i) =>
+      `<svg viewBox="0 0 24 24" class="${i < Math.floor(p.rating) ? '' : 'empty'}"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`
+    ).join('');
+  }
+  document.getElementById('pdp-rating-num').textContent = p.rating;
+  document.getElementById('pdp-reviews-link').textContent = `Ver ${p.reviews} avaliações`;
+
+  // Live viewing
+  const viewing = p.viewing || Math.floor(Math.random()*20 + 5);
+  document.getElementById('pdp-live-viewing').textContent = `${viewing} pessoas vendo agora`;
+
+  // Stock urgency
+  const stockEl = document.getElementById('pdp-stock');
+  if (stockEl) {
+    if (p.stock && p.stock <= 5) {
+      stockEl.innerHTML = `⚡ <strong>Apenas ${p.stock} unidades</strong> disponíveis · Último lote da coleção`;
+      stockEl.style.display = 'flex';
+    } else {
+      stockEl.innerHTML = `✓ Em estoque · Envio em 24h úteis`;
+      stockEl.style.display = 'flex';
+      stockEl.style.background = 'rgba(46, 125, 79, 0.08)';
+      stockEl.style.borderLeftColor = '#2e7d4f';
+    }
+  }
+
+  // Social proof strip
+  const sp = document.getElementById('pdp-social-proof-strip');
+  if (sp) {
+    const soldToday = Math.floor(Math.random() * 15 + 3);
+    sp.innerHTML = `
+      <div class="pdp-social-proof-line">Vendido ${soldToday}x nas últimas 24h</div>
+      <div class="pdp-social-proof-line">${p.reviews} avaliações · ${p.rating}★ médio</div>
+      <div class="pdp-social-proof-line">Marias, Renatas e Juliana de SP compraram esse</div>
+    `;
+  }
+
+  // Colors
+  const colorsEl = document.getElementById('pdp-colors');
+  if (colorsEl) {
+    colorsEl.innerHTML = p.colors.map((c,i) =>
+      `<div class="pdp-color-swatch${i===0?' active':''}" style="background:${c};" title="${c}" onclick="selectSwatch(this)"></div>`
+    ).join('');
+  }
+
+  // Reviews
+  const reviewsList = document.getElementById('pdp-reviews-list');
+  if (reviewsList && p.reviewsDetail) {
+    reviewsList.innerHTML = p.reviewsDetail.map(r => `
+      <div class="pdp-review">
+        <div class="pdp-review-header">
+          <div>
+            <span class="pdp-review-name">${r.name}</span>
+            <span class="pdp-review-verified">✓ VERIFICADO</span>
+          </div>
+          <span class="pdp-review-date">${r.date}</span>
+        </div>
+        <div class="pdp-review-stars">
+          ${Array.from({length:5}, (_,i) => i < r.rating
+            ? '<svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'
+            : '<svg viewBox="0 0 24 24" style="fill:#d4d0ca;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'
+          ).join('')}
+        </div>
+        <div class="pdp-review-text">${r.text}</div>
+        <div class="pdp-review-meta">${r.meta}</div>
+      </div>`).join('');
+  }
+
+  document.getElementById('pdp-reviews-avg').textContent = p.rating;
+  document.getElementById('pdp-reviews-count').textContent = `(${p.reviews} avaliações)`;
+
+  // Sticky mobile ATC
+  const stickyAtc = document.getElementById('sticky-atc');
+  if (stickyAtc) {
+    document.getElementById('sticky-atc-name').textContent = p.name;
+    document.getElementById('sticky-atc-price').textContent = p.price;
+    setTimeout(() => stickyAtc.classList.add('visible'), 300);
+  }
+
   document.getElementById('pdp-overlay').classList.add('active');
+  document.body.classList.add('pdp-open');
   document.body.style.overflow = 'hidden';
 }
 
 function closePDP(e) {
   if (!e || e.target === document.getElementById('pdp-overlay') || e.currentTarget === document.querySelector('.pdp-close')) {
     document.getElementById('pdp-overlay').classList.remove('active');
+    document.body.classList.remove('pdp-open');
     document.body.style.overflow = '';
+    const sticky = document.getElementById('sticky-atc');
+    if (sticky) sticky.classList.remove('visible');
+    currentPDPProduct = null;
   }
+}
+
+function addToCartFromPDP() {
+  if (!currentPDPProduct) return;
+  // Pega cor + tamanho selecionados
+  const activeColor = document.querySelector('.pdp-color-swatch.active');
+  const activeSize = document.querySelector('.pdp-size-btn.active');
+  const colorName = activeColor ? activeColor.getAttribute('title') : 'Noir';
+  const sizeName = activeSize ? activeSize.textContent : 'M';
+  const variant = `${colorName} · ${sizeName}`;
+  addToCart(currentPDPProduct.id, {variant: variant});
+  closePDP();
+  setTimeout(() => toggleCart(true), 300);
 }
 
 function selectSwatch(el) {
@@ -4751,12 +5833,53 @@ if ('IntersectionObserver' in window) {
 }
 
 /* ====================================================
+   COUNTDOWN TIMER
+   ==================================================== */
+function startCountdown() {
+  // Countdown de 12h a partir de agora (ou persiste no localStorage)
+  let endTime = localStorage.getItem('maeven_countdown_end');
+  if (!endTime) {
+    endTime = Date.now() + (12 * 60 * 60 * 1000);
+    localStorage.setItem('maeven_countdown_end', endTime);
+  } else {
+    endTime = parseInt(endTime);
+    if (Date.now() > endTime) {
+      endTime = Date.now() + (12 * 60 * 60 * 1000);
+      localStorage.setItem('maeven_countdown_end', endTime);
+    }
+  }
+
+  function update() {
+    const remaining = endTime - Date.now();
+    if (remaining <= 0) {
+      document.getElementById('cd-h').textContent = '00';
+      document.getElementById('cd-m').textContent = '00';
+      document.getElementById('cd-s').textContent = '00';
+      return;
+    }
+    const h = Math.floor(remaining / (1000 * 60 * 60));
+    const m = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((remaining % (1000 * 60)) / 1000);
+    const hEl = document.getElementById('cd-h');
+    const mEl = document.getElementById('cd-m');
+    const sEl = document.getElementById('cd-s');
+    if (hEl) hEl.textContent = h.toString().padStart(2,'0');
+    if (mEl) mEl.textContent = m.toString().padStart(2,'0');
+    if (sEl) sEl.textContent = s.toString().padStart(2,'0');
+  }
+  update();
+  setInterval(update, 1000);
+}
+
+/* ====================================================
    INIT
    ==================================================== */
 document.addEventListener('DOMContentLoaded', () => {
+  loadCart();
   initProducts();
+  renderCart();
   observeElements();
-  // Re-observe after products render
+  startCountdown();
   setTimeout(observeElements, 200);
 });
 </script>
