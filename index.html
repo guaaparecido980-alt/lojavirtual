@@ -475,6 +475,22 @@ p { color: var(--text-muted); max-width: 62ch; }
   );
   z-index: 2;
 }
+/* Em mobile, usar gradient vertical para não esconder a imagem */
+@media (max-width: 768px) {
+  .hero-bg::before {
+    background: linear-gradient(
+      180deg,
+      rgba(8, 8, 10, 0.85) 0%,
+      rgba(8, 8, 10, 0.6) 35%,
+      rgba(8, 8, 10, 0.5) 65%,
+      rgba(8, 8, 10, 0.88) 100%
+    );
+  }
+  .hero-bg .hero-img,
+  .hero-bg .hero-fallback {
+    object-position: center center !important;
+  }
+}
 .hero-bg::after {
   content: ""; position: absolute; inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
@@ -621,12 +637,23 @@ p { color: var(--text-muted); max-width: 62ch; }
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  flex-wrap: wrap;
+  line-height: 1.5;
+  max-width: 100%;
 }
 .hero-cta-support .live {
   width: 6px; height: 6px;
   background: var(--success);
   border-radius: 50%;
   box-shadow: 0 0 8px var(--success);
+  flex-shrink: 0;
+}
+@media (max-width: 600px) {
+  .hero-cta-support {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    line-height: 1.6;
+  }
 }
 
 /* NOVO: Ficha técnica no canto — substitui "nota do fundador" */
