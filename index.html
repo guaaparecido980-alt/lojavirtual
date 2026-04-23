@@ -282,6 +282,7 @@ p { color: var(--text-muted); max-width: 62ch; }
   border: 1px solid var(--gold); opacity: 0.3;
 }
 .nav-links { display: flex; align-items: center; gap: var(--s-4); list-style: none; }
+.nav-links .mobile-cta { display: none; }
 .nav-links a {
   font-size: 0.88rem;
   color: var(--text-muted);
@@ -346,6 +347,21 @@ p { color: var(--text-muted); max-width: 62ch; }
     align-items: flex-start;
   }
   .nav-links.mobile-open a { font-size: 1.2rem; font-family: var(--f-display); }
+  .nav-links.mobile-open .mobile-cta { display: inline-flex; }
+  .nav-links.mobile-open .mobile-cta {
+    margin-top: var(--s-2);
+    padding: 0.9rem 1.3rem;
+    background: var(--gold);
+    color: var(--bg);
+    font-family: var(--f-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* ============================================================
@@ -928,9 +944,10 @@ section { padding: var(--s-8) 0; position: relative; }
 }
 
 @media (max-width: 900px) {
-  .step { grid-template-columns: 80px 1fr; gap: var(--s-2); padding: var(--s-3) 0; }
+  .step { grid-template-columns: 90px 1fr; gap: var(--s-2); padding: var(--s-3) 0; }
   .step-desc, .step-duration { grid-column: 2; margin-top: 0.5rem; }
   .step-duration { margin-top: var(--s-1); }
+  .step-num { font-size: 0.78rem; }
 }
 
 /* ============================================================
@@ -1571,6 +1588,7 @@ footer { background: var(--bg); padding: var(--s-6) 0 var(--s-3); border-top: 1p
         <li><a href="#obras">Obras</a></li>
         <li><a href="#cases">Cases</a></li>
         <li><a href="#faq">FAQ</a></li>
+        <li><a href="https://wa.me/5541999999999?text=Ol%C3%A1%2C+gostaria+de+apresentar+meu+projeto+%C3%A0+LHM" class="mobile-cta" target="_blank" rel="noopener">Apresentar projeto →</a></li>
       </ul>
     </nav>
     <a href="https://wa.me/5541999999999?text=Ol%C3%A1%2C+gostaria+de+apresentar+meu+projeto+%C3%A0+LHM" class="nav-cta" target="_blank" rel="noopener">
@@ -1604,7 +1622,7 @@ footer { background: var(--bg); padding: var(--s-6) 0 var(--s-3); border-top: 1p
       2. Fallback SVG premium se imagem não carregar
       Basta remover a <img> quando não tiver foto e deixar só o fallback.
     -->
-    <img class="hero-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85" alt="Residência de alto padrão construída pela LHM Engenharia em Curitiba" loading="eager" fetchpriority="high" onerror="this.style.display='none'; document.querySelector('.hero-fallback').style.display='flex';"/>
+    <img class="hero-img" src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=2000" alt="Residência de alto padrão construída pela LHM Engenharia em Curitiba" loading="eager" fetchpriority="high" onerror="this.style.display='none'; document.querySelector('.hero-fallback').style.display='flex';"/>
     
     <!-- Fallback premium: planta técnica arquitetônica em SVG -->
     <div class="hero-fallback" style="display:none;">
@@ -1983,7 +2001,7 @@ footer { background: var(--bg); padding: var(--s-6) 0 var(--s-3); border-top: 1p
 
     <div class="portfolio-grid">
       <article class="project large fade-up">
-        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=85" alt="Residência de alto padrão em steel frame construída pela LHM" loading="lazy"/>
+        <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Residência de alto padrão em steel frame construída pela LHM" loading="eager"/>
         <div class="project-overlay">
           <div class="project-tag">Steel Frame · Residencial</div>
           <h3 class="project-title">Residência Condomínio Alphaville</h3>
@@ -1996,7 +2014,7 @@ footer { background: var(--bg); padding: var(--s-6) 0 var(--s-3); border-top: 1p
       </article>
 
       <article class="project fade-up">
-        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=85" alt="Casa contemporânea em alvenaria no litoral do Paraná" loading="lazy"/>
+        <img src="https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Casa contemporânea em alvenaria no litoral do Paraná"/>
         <div class="project-overlay">
           <div class="project-tag">Alvenaria · Residencial</div>
           <h3 class="project-title">Casa Mar — Litoral PR</h3>
@@ -2008,7 +2026,7 @@ footer { background: var(--bg); padding: var(--s-6) 0 var(--s-3); border-top: 1p
       </article>
 
       <article class="project fade-up">
-        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=85" alt="Clínica de alto padrão no Batel em Curitiba" loading="lazy"/>
+        <img src="https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Clínica de alto padrão no Batel em Curitiba"/>
         <div class="project-overlay">
           <div class="project-tag">Comercial · Saúde</div>
           <h3 class="project-title">Clínica Integrada Batel</h3>
@@ -2042,7 +2060,7 @@ footer { background: var(--bg); padding: var(--s-6) 0 var(--s-3); border-top: 1p
       </article>
 
       <article class="project fade-up">
-        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="Residência com piscina em Curitiba" loading="lazy"/>
+        <img src="https://images.pexels.com/photos/2119713/pexels-photo-2119713.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Residência com piscina em Curitiba"/>
         <div class="project-overlay">
           <div class="project-tag">Residencial</div>
           <h3 class="project-title">Casa com Vista — Graciosa</h3>
@@ -2160,7 +2178,7 @@ footer { background: var(--bg); padding: var(--s-6) 0 var(--s-3); border-top: 1p
       <!-- CASE 1 -->
       <article class="case-card fade-up">
         <div class="case-media">
-          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=85" alt="Residência em steel frame no Ecoville" loading="lazy"/>
+          <img src="https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Residência em steel frame no Ecoville"/>
           <span class="case-media-tag">Steel Frame · 340m²</span>
         </div>
         <div class="case-body">
@@ -2211,7 +2229,7 @@ footer { background: var(--bg); padding: var(--s-6) 0 var(--s-3); border-top: 1p
       <!-- CASE 3 -->
       <article class="case-card fade-up">
         <div class="case-media">
-          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=85" alt="Clínica de alto padrão no Batel" loading="lazy"/>
+          <img src="https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Clínica de alto padrão no Batel"/>
           <span class="case-media-tag">Comercial · 180m²</span>
         </div>
         <div class="case-body">
@@ -2526,6 +2544,40 @@ navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 }));
 
 // ============================================================
+// FALLBACK DE IMAGEM QUEBRADA (antes do Observer)
+// Se qualquer imagem do portfólio falhar, substitui por SVG premium.
+// Garante que o site nunca mostra img quebrada — sempre um fallback elegante.
+// ============================================================
+function installImageFallbacks() {
+  const fallbackSvg = `<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#C8A968" stroke-width="1">
+    <rect x="50" y="50" width="300" height="200" opacity="0.6"/>
+    <rect x="70" y="70" width="110" height="80" opacity="0.4"/>
+    <rect x="200" y="70" width="130" height="80" opacity="0.4"/>
+    <rect x="70" y="170" width="110" height="60" opacity="0.4"/>
+    <rect x="200" y="170" width="130" height="60" opacity="0.4"/>
+    <text x="200" y="275" text-anchor="middle" fill="#C8A968" font-family="monospace" font-size="9" opacity="0.7">LHM · PROJ</text>
+  </svg>`;
+
+  document.querySelectorAll('.project img, .case-media img').forEach(img => {
+    const handleError = () => {
+      const fallback = document.createElement('div');
+      fallback.className = 'project-fallback';
+      fallback.setAttribute('role', 'img');
+      fallback.setAttribute('aria-label', img.alt || 'Projeto LHM');
+      fallback.innerHTML = fallbackSvg;
+      img.replaceWith(fallback);
+    };
+    // Se já falhou (complete + naturalHeight 0), troca agora
+    if (img.complete && img.naturalHeight === 0) {
+      handleError();
+    } else {
+      img.addEventListener('error', handleError, { once: true });
+    }
+  });
+}
+installImageFallbacks();
+
+// ============================================================
 // FAQ accordion
 // ============================================================
 document.querySelectorAll('.faq-item').forEach(item => {
@@ -2563,6 +2615,33 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-up').forEach((el) => {
   if (!el.classList.contains('visible')) observer.observe(el);
 });
+
+// FALLBACK CRÍTICO: se por qualquer motivo o IntersectionObserver falhar
+// (scroll rápido, navegador antigo, timing ruim), força a visibilidade
+// de todos os elementos após 2 segundos. Garante que NADA fica invisível.
+setTimeout(() => {
+  document.querySelectorAll('.fade-up:not(.visible)').forEach(el => {
+    el.classList.add('visible');
+  });
+}, 2000);
+
+// FALLBACK ADICIONAL: no scroll, verifica se há elementos no viewport
+// que deveriam estar visíveis mas não estão (segurança extra)
+let scrollCheckPending = false;
+window.addEventListener('scroll', () => {
+  if (scrollCheckPending) return;
+  scrollCheckPending = true;
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.fade-up:not(.visible)').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      // se o elemento já está no viewport (ou já passou), mostra
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('visible');
+      }
+    });
+    scrollCheckPending = false;
+  });
+}, { passive: true });
 
 // ============================================================
 // Nav compacta ao scroll
