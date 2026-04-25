@@ -3475,6 +3475,33 @@ function openCookieConfig(banner) {
     border: 1px solid var(--gold);
   }
   .cookie-btn-save:hover { background: var(--gold-bright); }
+
+/* ============================================================
+   FALLBACKS PARA NAVEGADORES IN-APP (Telegram, Instagram, Facebook)
+   Esses navegadores não suportam backdrop-filter direito,
+   causando bugs visuais ("chuviscos" e rastros).
+============================================================= */
+@supports not (backdrop-filter: blur(1px)) {
+  .nav { background: rgba(8, 8, 10, 0.96) !important; }
+  .hero-spec { background: rgba(8, 8, 10, 0.92) !important; }
+  #cookie-modal { background: rgba(5, 5, 6, 0.96) !important; }
+}
+
+/* Fix de rendering em GPU fracas: força hardware acceleration */
+.nav, .hero, .hero-img, .case-card, .service, .tiny {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Fix anti-aliasing em fontes (texto serrilhado) */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
 </style>
 
 </body>
