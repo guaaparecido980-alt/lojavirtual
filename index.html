@@ -1928,6 +1928,82 @@ footer { background: var(--bg); padding: var(--s-6) 0 var(--s-3); border-top: 1p
   gap: var(--s-2);
 }
 .footer-bottom a:hover { color: var(--gold); }
+
+/* ============================================================
+   FOOTER CREDIT — Assinatura discreta e profissional
+============================================================= */
+.footer-credit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  padding: var(--s-3) 0 0;
+  margin-top: var(--s-2);
+}
+.footer-credit-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line-strong), transparent);
+  max-width: 120px;
+  opacity: 0.6;
+}
+.footer-credit-link {
+  font-family: var(--f-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  transition: all 0.35s var(--ease);
+  white-space: nowrap;
+}
+.footer-credit-link:hover {
+  color: var(--gold);
+  border-color: rgba(200, 169, 104, 0.2);
+  background: rgba(200, 169, 104, 0.03);
+}
+.credit-prefix {
+  opacity: 0.7;
+  font-weight: 400;
+}
+.credit-brand {
+  font-family: var(--f-display);
+  font-style: italic;
+  font-size: 0.92rem;
+  letter-spacing: -0.005em;
+  text-transform: none;
+  color: var(--text);
+  font-weight: 400;
+  transition: color 0.35s var(--ease);
+}
+.footer-credit-link:hover .credit-brand {
+  color: var(--gold);
+}
+.credit-arrow {
+  font-family: var(--f-body);
+  font-size: 0.85rem;
+  opacity: 0.5;
+  transition: all 0.35s var(--ease);
+}
+.footer-credit-link:hover .credit-arrow {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
+@media (max-width: 600px) {
+  .footer-credit-line { max-width: 40px; }
+  .footer-credit-link { 
+    font-size: 0.62rem; 
+    padding: 0.45rem 0.7rem;
+    gap: 0.4rem;
+  }
+  .credit-brand { font-size: 0.85rem; }
+}
 .footer-legal {
   display: inline-flex;
   gap: 0.5rem;
@@ -2968,6 +3044,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="#" id="open-cookie-config">Gerenciar cookies</a>
       </span>
       <span>Construindo com engenharia desde 2013</span>
+    </div>
+    <div class="footer-credit">
+      <span class="footer-credit-line"></span>
+      <a href="https://gustavodigital.online/?utm_source=lhmsteelframe&utm_medium=footer&utm_campaign=site-credit" target="_blank" rel="noopener" class="footer-credit-link" aria-label="Site desenvolvido por Gustavo Digital — especialista em sites premium para construção e engenharia">
+        <span class="credit-prefix">Site desenvolvido por</span>
+        <span class="credit-brand">Gustavo Digital</span>
+        <span class="credit-arrow">↗</span>
+      </a>
+      <span class="footer-credit-line"></span>
     </div>
   </div>
 </footer>
