@@ -312,7 +312,7 @@ h1, h2, h3, h4 {
   letter-spacing: -0.02em;
   font-variation-settings: "opsz" 144;
 }
-h1 { font-size: clamp(2.75rem, 7.5vw, 6rem); }
+h1 { font-size: clamp(2.5rem, 6vw, 4.75rem); }
 h2 { font-size: clamp(2rem, 5vw, 3.75rem); letter-spacing: -0.025em; }
 h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); font-weight: 500; }
 h4 { font-size: 1.125rem; font-weight: 500; letter-spacing: 0; }
@@ -498,15 +498,15 @@ p { color: var(--text-muted); max-width: 62ch; }
 ============================================================= */
 .hero {
   position: relative;
-  min-height: min(100vh, 820px);
-  padding: 140px 0 var(--s-5);
+  min-height: min(95vh, 780px);
+  padding: 120px 0 var(--s-5);
   display: flex;
   align-items: center;
   overflow: hidden;
   background: var(--bg-deep);
 }
 @media (max-width: 768px) {
-  .hero { min-height: 100vh; padding-top: 120px; }
+  .hero { min-height: 100vh; padding-top: 110px; }
 }
 
 .hero-bg { position: absolute; inset: 0; z-index: 0; }
@@ -567,12 +567,12 @@ p { color: var(--text-muted); max-width: 62ch; }
   opacity: 0.45;
 }
 
-.hero-content { position: relative; z-index: 4; max-width: 960px; }
+.hero-content { position: relative; z-index: 4; max-width: 1020px; }
 @media (min-width: 1281px) {
   /* Em desktop grande, reserva espaço à direita pra ficha técnica */
-  .hero-content { padding-right: 320px; }
-  .hero h1 { max-width: 800px; }
-  .hero-sub { max-width: 560px; }
+  .hero-content { padding-right: 290px; }
+  .hero h1 { max-width: 24ch; }
+  .hero-sub { max-width: 56ch; }
 }
 
 .hero-meta {
@@ -585,11 +585,19 @@ p { color: var(--text-muted); max-width: 62ch; }
   color: var(--text-muted);
   flex-wrap: wrap;
   align-items: center;
+  row-gap: 0.6rem;
 }
-.hero-meta span { display: inline-flex; align-items: center; gap: 0.5rem; }
+.hero-meta span { display: inline-flex; align-items: center; gap: 0.5rem; white-space: nowrap; }
 .hero-meta span::before {
   content: ""; width: 6px; height: 6px;
   background: var(--gold); border-radius: 50%;
+}
+
+/* Quebra controlada do H1 - só aparece em desktop, no mobile vira espaço */
+.h1-break { display: block; }
+@media (max-width: 600px) {
+  .h1-break { display: none; }
+  .h1-break::after { content: " "; }
 }
 
 /* NOVO: Badge de escassez */
@@ -622,8 +630,8 @@ p { color: var(--text-muted); max-width: 62ch; }
 .hero h1 {
   font-weight: 300;
   margin-bottom: var(--s-4);
-  max-width: 14ch;
-  line-height: 1;
+  max-width: 22ch;
+  line-height: 1.05;
 }
 
 .hero-sub {
@@ -2173,7 +2181,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <h1 class="fade-up visible">
-      Construímos o que<br/>você vai <span class="italic">passar<br/>para os próximos.</span>
+      Construímos o que você<br class="h1-break"/>vai <span class="italic">passar para os próximos.</span>
     </h1>
 
     <p class="hero-sub fade-up visible">
