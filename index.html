@@ -599,11 +599,23 @@ p { color: var(--text-muted); max-width: 62ch; }
   background: var(--gold); border-radius: 50%;
 }
 
-/* Quebra controlada do H1 - só aparece em desktop, no mobile vira espaço */
-.h1-break { display: block; }
+/* Quebra controlada do H1 - desktop: quebra linha | mobile: espaço inline */
+.h1-break {
+  display: block;
+  height: 0;
+  width: 100%;
+}
 @media (max-width: 600px) {
-  .h1-break { display: none; }
-  .h1-break::after { content: " "; }
+  .h1-break {
+    display: inline;
+    height: auto;
+    width: auto;
+  }
+  /* Espaço explícito antes do próximo elemento (funciona em Safari iOS) */
+  .h1-break::before {
+    content: "\00a0";
+    /* \00a0 = non-breaking space, garantido em todos os navegadores */
+  }
 }
 
 /* NOVO: Badge de escassez */
@@ -2574,7 +2586,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <h1 class="fade-up visible">
-      Construímos o que você vai<br class="h1-break"/><span class="italic">passar para os próximos.</span>
+      Construímos o que você vai<span class="h1-break"></span><span class="italic">passar para os próximos.</span>
     </h1>
 
     <p class="hero-sub fade-up visible">
