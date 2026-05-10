@@ -3857,11 +3857,16 @@ document.querySelectorAll('.faq-question').forEach(q => {
   }, { once: true });
 });
 
-// 5. Link do footer "Gerenciar cookies" — reabre modal
+// 5. Link do footer "Gerenciar cookies" — abre modal granular direto
+//    com a configuração atual marcada (sem precisar recarregar a página)
 document.getElementById('open-cookie-config')?.addEventListener('click', (e) => {
   e.preventDefault();
-  localStorage.removeItem('lhm_cookie_consent_v1');
-  location.reload();
+  // Lê o consent atual (se existir) pra pré-marcar os toggles
+  const STORAGE_KEY = 'lhm_cookie_consent_v1';
+  const saved = localStorage.getItem(STORAGE_KEY);
+  const currentConsent = saved ? JSON.parse(saved) : { analytics: false, ads: false };
+  // Abre o modal sem banner (passa null) e com os toggles pré-preenchidos
+  openCookieConfig(null, currentConsent);
 });
 
 // ============================================================
@@ -3935,9 +3940,15 @@ function applyConsent(consent) {
   }
 }
 
-function openCookieConfig(banner) {
+function openCookieConfig(banner, currentConsent) {
+  // Default: nenhum consent dado ainda (caso 1ª visita)
+  const consent = currentConsent || { analytics: false, ads: false };
+
   const modal = document.createElement('div');
   modal.id = 'cookie-modal';
+  modal.setAttribute('role', 'dialog');
+  modal.setAttribute('aria-modal', 'true');
+  modal.setAttribute('aria-label', 'Configurar cookies');
   modal.innerHTML = `
     <div class="cookie-modal-inner">
       <h3>Configurar cookies</h3>
@@ -3953,35 +3964,61 @@ function openCookieConfig(banner) {
           <strong>Análise</strong>
           <p>Ajudam a entender como você usa o site (Google Analytics).</p>
         </div>
-        <label class="cookie-switch"><input type="checkbox" id="opt-analytics"><span></span></label>
+        <label class="cookie-switch"><input type="checkbox" id="opt-analytics" ${consent.analytics ? 'checked' : ''}><span></span></label>
       </div>
       <div class="cookie-option">
         <div>
           <strong>Marketing</strong>
           <p>Permitem anúncios relevantes em outras plataformas (Meta, Google Ads).</p>
         </div>
-        <label class="cookie-switch"><input type="checkbox" id="opt-ads"><span></span></label>
+        <label class="cookie-switch"><input type="checkbox" id="opt-ads" ${consent.ads ? 'checked' : ''}><span></span></label>
       </div>
       <div class="cookie-modal-actions">
+        <button class="cookie-btn cookie-btn-cancel" id="cookie-cancel">Cancelar</button>
         <button class="cookie-btn cookie-btn-save" id="cookie-save">Salvar preferências</button>
       </div>
     </div>
   `;
   document.body.appendChild(modal);
   setTimeout(() => modal.classList.add('visible'), 10);
-  
+
+  // Função pra fechar modal de forma limpa
+  function closeModal() {
+    modal.classList.remove('visible');
+    setTimeout(() => modal.remove(), 300);
+  }
+
+  // Botão SALVAR
   document.getElementById('cookie-save').addEventListener('click', () => {
-    const consent = {
+    const newConsent = {
       analytics: document.getElementById('opt-analytics').checked,
       ads: document.getElementById('opt-ads').checked,
       functional: true,
       timestamp: Date.now()
     };
-    localStorage.setItem('lhm_cookie_consent_v1', JSON.stringify(consent));
-    applyConsent(consent);
-    modal.remove();
-    banner.remove();
+    localStorage.setItem('lhm_cookie_consent_v1', JSON.stringify(newConsent));
+    applyConsent(newConsent);
+    closeModal();
+    // Remove banner só se ele existe (cenário primeira visita)
+    if (banner) banner.remove();
   });
+
+  // Botão CANCELAR — fecha sem salvar
+  document.getElementById('cookie-cancel').addEventListener('click', closeModal);
+
+  // Fecha ao clicar fora (no overlay escuro)
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Fecha com tecla ESC
+  const escHandler = (e) => {
+    if (e.key === 'Escape') {
+      closeModal();
+      document.removeEventListener('keydown', escHandler);
+    }
+  };
+  document.addEventListener('keydown', escHandler);
 }
 </script>
 
@@ -4153,6 +4190,16 @@ function openCookieConfig(banner) {
     border-top: 1px solid var(--line);
     display: flex;
     justify-content: flex-end;
+    gap: 0.6rem;
+  }
+  .cookie-btn-cancel {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--line-strong);
+  }
+  .cookie-btn-cancel:hover {
+    color: var(--text);
+    border-color: var(--text-muted);
   }
   .cookie-btn-save {
     background: var(--gold);
